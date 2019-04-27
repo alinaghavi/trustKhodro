@@ -1,0 +1,22 @@
+.banner1 {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  background: url(../img/daffodils-spring-wallpaper-1680x1050.jpg); }
+
+.banner2 {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  background: url(../img/daffodils-spring-wallpaper-1680x1050.jpg);
+  top: 50%;
+  bottom: 100%; }
+
+p {
+  position: absolute;
+  z-index: 2; }
+

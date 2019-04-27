@@ -2,11 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 const path = require('path');
-const ImageminPlugin = require("imagemin-webpack");
-const imageminGifsicle = require("imagemin-gifsicle");
-const imageminMozjpeg = require("imagemin-mozjpeg");
-const imageminPngquant = require("imagemin-pngquant");  
-const imageminSvgo = require("imagemin-svgo");
 
 
 module.exports = {
@@ -70,15 +65,6 @@ module.exports = {
                     },
                 ],
             },
-            {
-                test: /\.(html)$/,
-                use: {
-                  loader: 'html-loader',
-                  options: {
-                    attrs: ['img:src']
-                  }
-                }
-              },
             {
                 test:/\.css$/,
                 use:[
@@ -187,27 +173,5 @@ module.exports = {
             filename: 'views/Shared/Index.html',
             template: './src/views/Shared/Index.html',
         }),
-        new ImageminPlugin({
-            bail: false, // Ignore errors on corrupted images
-            cache: true,
-            imageminOptions: {
-              // Lossless optimization with custom option
-              // Feel free to experement with options for better result for you
-              plugins: [
-                imageminGifsicle({
-                  interlaced: true
-                }),
-                imageminMozjpeg({
-                  progressive: true
-                }),
-                imageminPngquant({
-                  optimizationLevel: 5
-                }),
-                imageminSvgo({
-                  removeViewBox: true
-                })
-              ]
-            }
-          })
     ]
 };
