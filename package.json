@@ -48,7 +48,7 @@
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "popper.js": "^1.14.7"
   },
   "keywords": [],
