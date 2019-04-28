@@ -1,1 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
+
+$font-stack:    Homa, sans-serif;
+
+body, p {
+  font-family: $font-stack;
+}
