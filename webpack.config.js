@@ -1,10 +1,12 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
-const path = require('path');
 
 
 module.exports = {
+    context: __dirname,
     entry: {
         DashboardIndex: './src/js/DashboardIndex.js',
         DashboardAbout: './src/js/DashboardAbout.js',
@@ -19,6 +21,7 @@ module.exports = {
         Shared: './src/js/Shared.js',
         allImport: './src/js/all-import.js'
     },
+    devtool: 'inline-source-map',
     output: {
         filename: 'js/[name].bundle.js',
     },
@@ -27,6 +30,11 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, './src/'),
         port: 8080
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        }
     },
 
     module: {
@@ -97,6 +105,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
