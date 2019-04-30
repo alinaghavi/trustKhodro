@@ -81,10 +81,10 @@
 }
 .gallery1{
     border: 2px solid $text-primary;
-    width: 1200px;
     .imggallery1{
         width: 364px;
         height: 273px;
+        margin: .2rem;
     }
 }
 @media screen and (max-width: 1090px){
