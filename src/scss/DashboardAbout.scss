@@ -1,20 +1,159 @@
+@import 'all-import';
 .content-main{
-    background-color: rgb(235, 235, 235);
+    background-color: $secondary;
     height: 3.1875rem;
     .content{
-        height: 1.2rem;
+        height: 2rem;
         // width: 75rem;
         margin: .5rem auto;
-            h3{
+            h5{
                 margin: 0;
-                font-size: 20px;
+                display: flex;
+                align-items: flex-end;
             }
     }
     .red-lit-bar{
+        background-color: $primary;
+        height: 13px;
+    }
+}
+.red-md-bar{
+    box-shadow: inset 0px 0rem 0rem 4px rgba(0, 0, 0, 1);
+    h6{
         width: 100%;
-        div{
-            background-color: rgb(254, 0, 0);
-            height: 13px;
+        background-color: $primary;
+        text-align: end;
+        color: white;
+        padding: .68rem;
+        margin: 0 !important;
+        &:nth-child(1){
+            text-align: start;
+        }
+        &:nth-child(3){
+            img{
+                width:7%;
+            }
+        }
+        &:nth-child(1){
+            img{
+                width:3%;
+            }
+        }
+        &:nth-child(2){
+            img{
+                width:13%;
+            }
         }
     }
+
+}
+.bar-fixer{
+    width:100%;
+    box-shadow: inset 0px -13px 0px 0px red;
+    background-color: $secondary;
+}
+.msale-expert{
+    margin-top: 25px;
+    .sale-expert{
+        width: 95%;
+        p{
+            color: $text-primary;
+            text-align: justify;
+        }
+        .card{
+            background-color: $secondary;
+            margin: 0 7px;
+            height: 300px;
+            width: 290px;
+            color: $text-primary;
+            text-align: right;
+            padding: .8rem .5rem;
+            .card-body{
+                padding: 0;
+            }
+        }
+    }
+    .red-lg-bar{
+        background-color: $primary;
+        width: 26px;
+        height: 356px;
+    }
+}
+.gallery1{
+    border: 2px solid $text-primary;
+    width: 1200px;
+    .imggallery1{
+        width: 364px;
+        height: 273px;
+    }
+}
+@media screen and (max-width: 1090px){
+    .bar-fixer{
+        box-shadow: none;
+    }
+    .container{
+        margin: 0 !important;
+        max-width:100% !important;
+        width: 100%;
+    }
+    .content{
+        h5{
+            font-size: 14px;
+        }
+}
+.red-lg-bar{
+    display: none;
+}
+}
+@media screen and(max-width: 990px){
+    .msale-expert{
+        .sale-expert{
+            .card{
+                height: auto;
+            }
+        }
+    }
+}
+@media screen and (max-width: 621px){
+    .red-md-bar{
+        h6{
+            font-size: 12px;
+        }
+    }
+    .content{
+            h5{
+                font-size: 12px;
+            }
+    }
+}
+@media screen and (max-width: 576px){
+    .msale-expert{
+        .sale-expert{
+                display: flex;
+                justify-content: center;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .red-md-bar{
+        h6{
+            font-size: 8px;
+            img{
+                width: 12px !important;
+                white-space: nowrap;
+            }
+        }
+        h6:nth-child(2){
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    .content{
+        h5{
+            font-size: 8px;
+            img{
+                width: 20px;
+            }
+        }
+}
 }
