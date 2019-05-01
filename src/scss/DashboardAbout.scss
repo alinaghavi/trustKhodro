@@ -1,4 +1,25 @@
 @import 'all-import';
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+#{headings(1,6)},p {
+    text-align: right;
+    color: $text-primary;
+}
+
+.container-fluid{
+    height: 320px;
+    .img-main{
+        background: url('https://via.placeholder.com/1920x320') center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
 .content-main{
     background-color: $secondary;
     height: 3.1875rem;
@@ -10,6 +31,7 @@
                 margin: 0;
                 display: flex;
                 align-items: flex-end;
+                color: $text-primary;
             }
     }
     .red-lit-bar{
@@ -24,7 +46,7 @@
         background-color: $primary;
         text-align: end;
         color: white;
-        padding: .68rem;
+        padding: .378rem;
         margin: 0 !important;
         &:nth-child(1){
             text-align: start;
@@ -52,33 +74,35 @@
     box-shadow: inset 0px -13px 0px 0px red;
     background-color: $secondary;
 }
-.msale-expert{
-    margin-top: 25px;
-    .sale-expert{
-        width: 95%;
-        p{
-            color: $text-primary;
-            text-align: justify;
-        }
-        .card{
-            background-color: $secondary;
-            margin: 0 7px;
-            height: 300px;
-            width: 290px;
-            color: $text-primary;
-            text-align: right;
-            padding: .8rem .5rem;
-            .card-body{
-                padding: 0;
+.container{
+    flex-direction: column;
+    .msale-expert{
+        margin-top: 25px;
+        .sale-expert{
+            width: 95%;
+            margin: 0 auto;
+            p{
+                color: $text-primary;
+                text-align: justify;
+                line-height: 2;
+            }
+            .card{
+                background-color: $secondary;
+                margin: 0 7px;
+                color: $text-primary;
+                text-align: right;
+                padding: .8rem .5rem;
+                .card-body{
+                    padding: 0;
+                }
             }
         }
+        .red-lg-bar{
+            background-color: $primary;
+            width: 26px;
+            height: 356px;
+        }
     }
-    .red-lg-bar{
-        background-color: $primary;
-        width: 26px;
-        height: 356px;
-    }
-}
     .big-images{
         border: 1px solid $line-primary;
         padding: 12px;
@@ -99,9 +123,17 @@
             padding-bottom: 23px;
             margin: 17px 20.5px;
             height: (171px + 35.96px);
+            transition:.3s cubic-bezier(0.4, 0.0, 0.2, 1);
             img{
                 width: 100%;
                 height: 100%;
+            }
+            &:hover{
+                border-bottom: 3px solid $primary;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                transition:.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+                transition-property: box-shadow transform;
+                transform: translateZ(1rem);
             }
         }
         h3{
@@ -171,6 +203,21 @@
         .sale-expert{
             .card{
                 height: auto;
+                &:nth-child(1){
+                    margin-right:auto;
+                }
+                &:nth-child(2){
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+@media screen and(max-width: 844px){
+    .container{
+        .gallery-1{
+            img{
+                margin: 12px auto;
             }
         }
     }
@@ -192,6 +239,9 @@
         .sale-expert{
                 display: flex;
                 justify-content: center;
+                .card{
+                    margin: 4px 0 !important;
+                }
         }
     }
 }
