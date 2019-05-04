@@ -8,6 +8,7 @@ const webpack = require('webpack');
 module.exports = {
     context: __dirname,
     entry: {
+        allImport: './src/js/all-import.js',
         DashboardIndex: './src/js/DashboardIndex.js',
         DashboardAbout: './src/js/DashboardAbout.js',
         DashboardLogin: './src/js/DashboardLogin.js',
@@ -18,8 +19,7 @@ module.exports = {
         Order: './src/js/Order.js',
         Register: './src/js/Register.js',
         Search: './src/js/Search.js',
-        Shared: './src/js/Shared.js',
-        allImport: './src/js/all-import.js'
+        Shared: './src/js/Shared.js'
     },
     devtool: 'inline-source-map',
     output: {
@@ -30,11 +30,6 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, './src/'),
         port: 8080
-    },
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-        }
     },
 
     module: {

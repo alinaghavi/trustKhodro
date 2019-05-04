@@ -6,4 +6,4 @@ import '../css/fontiran.css';
 import 'malihu-custom-scrollbar-plugin';
 import './jquery.mousewheel';
 import '../css/jquery.mCustomScrollbar.css';
-// const images = require.context('../img');
+const images = require.context('../img');
