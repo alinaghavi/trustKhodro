@@ -7,8 +7,9 @@
     }
 }
 #{headings(1,6)},p {
-    text-align: right;
+    text-align: justify;
     color: $text-primary;
+    letter-spacing: -.5px;
 }
 
 .container-fluid{
@@ -41,6 +42,10 @@
 }
 .red-md-bar{
     box-shadow: inset 0px 0rem 0rem 4px rgba(0, 0, 0, 1);
+    #{headings(1,6)},p {
+        font-size: 20px;
+        line-height: 20px;
+    }
     h6{
         width: 100%;
         background-color: $primary;
@@ -49,7 +54,7 @@
         padding: .378rem;
         margin: 0 !important;
         &:nth-child(1){
-            text-align: start;
+            text-align: justify;
         }
         &:nth-child(3){
             img{
@@ -79,12 +84,18 @@
     .msale-expert{
         margin-top: 25px;
         .sale-expert{
-            width: 95%;
-            margin: 0 auto;
+            border-left:26px solid $primary;
+            border-right:26px solid $primary;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+            height: 310px;
+            margin: 0;
             p{
                 color: $text-primary;
                 text-align: justify;
-                line-height: 2;
+                line-height: 35px;
             }
             .card{
                 background-color: $secondary;
@@ -97,10 +108,8 @@
                 }
             }
         }
-        .red-lg-bar{
-            background-color: $primary;
-            width: 26px;
-            height: 356px;
+        .col-lg-6{
+            height: 310px;
         }
     }
     .big-images{
@@ -157,24 +166,40 @@
         }
     }
 }
-.gallery-1{
+.gallery-1-caption{
     border: 1px solid $line-primary;
     margin: 1rem auto !important;
     padding: 15px 0;
-    width: 95%;
-    img{
-        padding: 0 12px !important;
-    }
-}
-.gallery-1-caption{
-    width: 95%;
-    margin: 0 auto !important;
     .col-md-4{
-        img{
+        img[alt="car-img"]{
+            padding: 15px 0;
+            width: 100%;
+            height: 273px;
+        }
+        img[alt="checkmark"]{
             margin-left:10px;
         }
         h4{
             color: $primary;
+            height: 15%;
+            font-size: 22px;
+        }
+        p{
+            line-height: 25px;
+        }
+    }
+}
+@media screen and (max-width:1200px){
+    .msale-expert{
+        .sale-expert{
+            height: 270px !important;
+            .col-lg-6{
+                p{
+                    line-height: 25px !important;
+                }
+                font-size: 14px;
+                height: 270px;
+            }
         }
     }
 }
@@ -192,15 +217,26 @@
             font-size: 14px;
         }
 }
-.red-lg-bar{
-    display: none;
+.msale-expert{
+    .sale-expert{
+        border: none !important;
+        height: auto !important;
+        .col-lg-6{
+            p{
+                line-height: 25px !important;
+            }
+            font-size: 16px;
+            height: auto !important;
+        }
+    }
 }
 }
-@media screen and(max-width: 990px){
+@media screen and(max-width: 991px){
     .msale-expert{
         .sale-expert{
             .card{
                 height: auto;
+                margin-bottom: 20px !important;
                 &:nth-child(1){
                     margin-right:auto;
                 }
@@ -217,6 +253,19 @@
             img{
                 margin: 12px auto;
             }
+        }
+    }
+    .red-md-bar{
+        #{headings(1,6)},p {
+            font-size: 16px;
+            line-height: 20px !important;
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .gallery-1-caption{
+        p{
+            padding-bottom: 20px !important;
         }
     }
 }
