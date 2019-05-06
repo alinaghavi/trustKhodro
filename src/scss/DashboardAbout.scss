@@ -187,6 +187,7 @@
                 }
                 .row{
                     .gallery-img{
+                        cursor: pointer;
                         border: 1px solid $line-primary;
                         padding: 12px;
                         padding-top: 11px;
@@ -221,13 +222,16 @@
             background-color: $primary;
             color: $secondary;
         }
-        .page-item .page-link{
-            color: $text-primary;
-            img{
-                width: 12px;
-                line-height: 10px;
+        .page-item{
+            cursor: pointer;
+            .page-link{
+                color: $text-primary;
+                img{
+                    width: 12px;
+                    line-height: 10px;
+                }
             }
-        }
+    }
     }
 }
 .gallery-1-caption{
