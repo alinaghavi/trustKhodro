@@ -17,20 +17,20 @@ $(".page-link").click(function(){
             setTimeout(() => {
                 $(this).css('display', 'none');
                 $(this).removeClass('fade-out');
-            }, 1000);
+            }, 700);
         }
     });
      for(var i = 1; i <= $('.page-n').length; i++){
         console.log($this.data(), "          ", $('.page-n').eq(i-1).data());
          if($this.data("index") == $('.page-n').eq(i-1).data("index")){
              setTimeout(() => {
+                $('.page-n').eq(i-1).css('display', 'block');   
                 $('.page-n').eq(i-1).addClass('fade-in');
                 setTimeout(() => {
-                    $('.page-n').eq(i-1).css('display', 'block');
                     $('.page-n').eq(i-1).addClass('active');
                     $('.page-n').eq(i-1).removeClass('fade-in');
-                 }, 1000);
-             }, 500);
+                 }, 700);
+             }, 690);
              break;
          }
          var nextPageData = blockPage.data("index") + 1;
@@ -41,12 +41,12 @@ $(".page-link").click(function(){
                 $('.page-n').each(function(){
                         if($(this).data("index") == nextPageData){
                             setTimeout(() => {
+                                $(this).css('display', 'block');
                                 $(this).addClass('fade-in');
                                 setTimeout(() => {
-                                    $(this).css('display', 'block');
                                     $(this).removeClass('fade-in');
-                                }, 1000);
-                            }, 500);
+                                }, 700);
+                            }, 690);
                         }
                     });
          }
@@ -55,12 +55,12 @@ $(".page-link").click(function(){
              $('.page-n').each(function(){
                      if($(this).data("index") == lastPageData){
                          setTimeout(() => {
+                            $(this).css('display', 'block');
                              $(this).addClass('fade-in');
                              setTimeout(() => {
-                                 $(this).css('display', 'block');
                                  $(this).removeClass('fade-in');
-                             }, 1000);
-                         }, 500);
+                             }, 700);
+                         }, 690);
                      }
                  });
       }

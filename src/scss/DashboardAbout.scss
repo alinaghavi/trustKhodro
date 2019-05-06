@@ -12,10 +12,10 @@
     letter-spacing: -.5px;
 }
 .fade-out {
-    animation: fadeOut 1s cubic-bezier(0.4, 0.0, 0.2, 1) ;
+    animation: fadeOut .7s cubic-bezier(0.4, 0.0, 0.2, .7) ;
   }  
   .fade-in {
-    animation: fadeIn 1s cubic-bezier(0.4, 0.0, 0.2, 1) ;
+    animation: fadeIn .7s cubic-bezier(0.4, 0.0, 0.2, 1) ;
   }
   @-webkit-keyframes fadeIn {
   from {
