@@ -47,7 +47,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
@@ -57,7 +57,7 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -156,7 +156,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: true,
             chunks: ['allImport' , 'Order'],
-            filename: 'views/Order/Index.html',
+            filename: '/views/Order/Index.html',
             template: './src/views/Order/Index.html',
         }),
         new HtmlWebpackPlugin({
