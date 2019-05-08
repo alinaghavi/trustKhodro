@@ -1,1 +1,97 @@
 @import 'all-import';
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+#{headings(1,6)},p {
+    text-align: justify;
+    color: $text-primary;
+    letter-spacing: -.5px;
+}
+.wrapper{
+    margin: 36px 0;
+    .container{
+        .row{
+            background-color: $secondary;
+            padding: 13px 0 19px;
+            .gallery{
+                padding:0 38px 0 26px!important;
+                border-right: 1px solid white;
+                .gallery-img{
+                    margin-bottom: 15px;
+                    &:first-child{
+                        margin-top: 4px;
+                    }
+                    &:last-child{
+                        margin-bottom:4px; 
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .gallery-item{
+                margin-top: 16px;
+                padding:0 29px 0 25px!important;
+                h4{
+                    text-align: right;
+                    color: $primary;
+                }
+                .card{
+                    background-color: unset !important;
+                    width: 100%;
+                    .card-body{
+                        background-color:$secondary;
+                        padding: 1rem;
+                        padding-top: 13px;
+                        .row{
+                            padding: 1.25rem .815rem;
+                            background-color: white;
+                            .col-2{
+                                P{
+                                    margin-bottom: 8px;;
+                                }                            
+                            }
+                            .col-7{
+                                display: flex;
+                                justify-content: space-between;;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                .rounded-icons{
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    .rounded-icon{
+                                        cursor: pointer;
+                                        margin: 6.5px;
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+                                }
+                                .purchase-request{
+                                    p{
+                                        margin: 0;
+                                    }
+                                    .click-request{
+                                        display:block;
+                                        padding: .785rem 3.95rem;
+                                        background-color: $primary;
+                                        &:hover{
+                                            text-decoration: none;
+                                        }
+                                        h3{
+                                            color: white;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
