@@ -156,7 +156,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: true,
             chunks: ['allImport' , 'Order'],
-            filename: 'views/Order/Index.html',
+            filename: '/views/Order/Index.html',
             template: './src/views/Order/Index.html',
         }),
         new HtmlWebpackPlugin({
