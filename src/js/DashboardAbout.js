@@ -3,7 +3,6 @@ for (var i = 0; i < $('.page-n').length; i++) {
     $('.page-n').eq(i).data('index', i + 1);
 }
 var blockPage;
-var nextPage;
 $(".page-link").click(function () {
     $('.page-item').removeClass('active');
     var $this = $(this);
@@ -20,6 +19,7 @@ $(".page-link").click(function () {
             }, 700);
         }
     });
+    $('.block-change').text(blockPage.data("index"));
     for (var i = 1; i <= $('.page-n').length; i++) {
         if ($this.data("index") == $('.page-n').eq(i - 1).data("index")) {
             setTimeout(() => {
@@ -63,14 +63,9 @@ $(".page-link").click(function () {
         }
     }
 });
-var blockedPage;
-$(document).on('change', blockPage, function () {
-    $('.page-n').each(function () {
-        if ($(this).css('display') == 'block') {
-            blockedPage = $(this);
-        }
-    });
-    if (blockedPage.data("index") == 1) {
+function change() {
+    console.log("hello");
+    if ($('.block-change').text() == 1) {
         $('.page-link').each(function () {
             if ($(this).data("index") == '<svg aria-hidden="true" width="8" focusable="false" data-prefix="fas" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"> <path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg>') {
                 $(this).parent().css("display", "block");
@@ -80,7 +75,7 @@ $(document).on('change', blockPage, function () {
             }
         });
     }
-    if (blockedPage.data("index") == 3) {
+    if ($('.block-change').text() == 3) {
         $('.page-link').each(function () {
             if ($(this).data("index") == '<svg aria-hidden="true" width="8" focusable="false" data-prefix="fas" data-icon="angle-left" class="svg-inline--fa fa-angle-left fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"> <path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg>') {
                 $(this).parent().css("display", "none");
@@ -90,7 +85,7 @@ $(document).on('change', blockPage, function () {
             }
         });
     }
-});
+}
 $('.gallery-img').click(function () {
     var targetAddress = $(this).children().attr('src');
     $(this).attr('data-toggle', 'modal');
