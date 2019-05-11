@@ -23,22 +23,26 @@
 }
 .wrapper{
     margin: 36px 0;
-    .request.container > .row{
+    .request.container {
+        margin-bottom: 11px;
+        .row{
             background-color: $secondary;
             padding: 13px 0 19px;
             .gallery{
                 padding:0 38px 0 26px!important;
                 border-right: 1px solid white;
-                .gallery-img{
-                    margin-bottom: 15px;
-                    &:first-child{
-                        margin-top: 4px;
-                    }
-                    &:last-child{
-                        margin-bottom:4px; 
-                    }
-                    img{
-                        width: 100%;
+                .scroll-h{
+                    .gallery-img{
+                        margin-bottom: 15px;
+                        &:first-child{
+                            margin-top: 4px;
+                        }
+                        &:last-child{
+                            margin-bottom:4px; 
+                        }
+                        img{
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -103,20 +107,35 @@
             }
         }
     }
+    .license.container{
+        padding-right: 0;
+        display: flex;
+            .border{
+                width: 36%;
+                &:last-child{
+                    margin-right: 20px;
+                }
+                p{
+                    margin:15px 20px;
+                }
+            }
+    }
+}
 @include medx (992px){
     .gallery{
-        overflow-x: scroll;
-        display: flex;
-        padding : 0 !important;
-        .gallery-img{
-            margin-right: 3px;
-            margin-bottom: 0 !important;
-            img{
-                width: auto !important;
-            }
-            &:first-child{
-                margin-top:0 !important;
-                margin-right: 0;
+        .scroll-h{
+            display: flex;
+            overflow: hidden;
+                .gallery-img{
+                    margin-right: 3px;
+                    margin-bottom: 0 !important;
+                    img{
+                        width: auto !important;
+                    }
+                    &:first-child{
+                        margin-top:0 !important;
+                        margin-right: 0;
+                }
             }
         }
     }
@@ -143,4 +162,13 @@
             }
         }
     }
+    .license.container{
+        padding-left: 0 !important;
+        .border{
+            width: 50% !important;
+            padding-left:0 !important;
+        }
+    }
+}
+@include medx(768px){
 }
