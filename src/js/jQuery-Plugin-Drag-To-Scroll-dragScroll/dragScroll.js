@@ -1,4 +1,4 @@
- function bindDragScroll($container, $scroller) {
+function bindDragScroll($container, $scroller) {
 
      var $window = $(window);
 
@@ -93,6 +93,4 @@
      }
 
  }
- var $container = $(".gallery");
-var $scroller = $(".scroll-h");
-bindDragScroll($container, $scroller);
+ export default bindDragScroll
