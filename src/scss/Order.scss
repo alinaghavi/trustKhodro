@@ -9,6 +9,22 @@
         @content;
     }
 }
+@mixin details($n) {
+        .container .card.details-#{$n}{
+            padding: 6px 22px;
+            .card-footer{
+                background-color: $secondary !important;
+                h3{
+                    text-align: center;
+                }
+        }
+        .card-body{
+            .row{
+                @content;
+            }
+        }
+    }
+}
 @function headings($from:1, $to:6) {
     @if $from == $to {
         @return 'h#{$from}';
@@ -20,6 +36,21 @@
     text-align: justify;
     color: $text-primary;
     letter-spacing: -.5px;
+}
+a{
+    color: $text-primary;
+    &:hover{
+        color: $text-primary;
+    }
+}
+.card{
+    border-color: $line-primary !important;
+}
+.rounded-icon{
+    cursor: pointer;
+    margin: 6.5px;
+    width: 40px;
+    height: 40px;
 }
 .wrapper{
     margin: 36px 0;
@@ -76,12 +107,6 @@
                                 .rounded-icons{
                                     display: flex;
                                     justify-content: flex-end;
-                                    .rounded-icon{
-                                        cursor: pointer;
-                                        margin: 6.5px;
-                                        width: 40px;
-                                        height: 40px;
-                                    }
                                 }
                                 .purchase-request{
                                     p{
@@ -119,6 +144,81 @@
                     margin:15px 20px;
                 }
             }
+    }
+    @include details(1){
+        .col-lg{
+            &:not(:last-child){    
+                border-left: 1px solid $line-primary;
+            }
+            a{
+                font-size: 13px;
+                color: $text-primary;
+            }
+        }
+    }
+    @include details(2){
+        .col-lg-6{
+            &:nth-child(1){
+                padding: 0 .7rem 0 0;
+                .col-lg{
+                    border-left: 1px solid $line-primary;
+                }
+            }
+            &:nth-child(2){
+                padding: 0 0 0 .7rem;
+            }
+            >h5{
+                border-bottom: 1px solid $line-primary;
+                text-align: center;
+            }
+        }
+    }
+    @include details(3){
+
+    }
+    .container.linked-cars{
+        background-color: $secondary;
+        .car-list{
+            margin: 0 1px;
+        }
+        .row{
+            margin: 5px 1px;
+            .card{
+                border: 1px solid;
+                &:not(:last-child){
+                    margin-left: 10px;
+                }
+                >h4{
+                    margin: 15px 0 !important;
+                }
+                .card-body{
+                    padding: 0 8px;
+                    h4{
+                        color: $primary;
+                    }
+                }
+                img{
+                    width:342px;
+                    height: 257px;
+                }
+            }
+        }
+    }
+    .container.q-common{
+        background-color: $secondary;
+        >h4{
+            margin-right: 62px;
+        }
+        .col-lg-6{
+            padding: 12px 12px 7.5px 12px;
+            .d-flex{
+                padding:0 20px;
+            }
+            span{
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
 @include medx (992px){
