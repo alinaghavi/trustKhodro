@@ -1,9 +1,35 @@
 import './all-import.js';
 import '../scss/Order.scss';
-import './jQuery-Plugin-Drag-To-Scroll-dragScroll/dragScroll.js';
+import bindDragScroll from './jQuery-Plugin-Drag-To-Scroll-dragScroll/dragScroll.js';
 import '../css/jquery.mCustomScrollbar.css';
 import 'malihu-custom-scrollbar-plugin';
 import '../js/jquery.mousewheel.js';
+var $container = $(".gallery");
+var $scroller = $(".scroll-h");
+bindDragScroll($container, $scroller);
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+if( isMobile.any() ){
+    $scroller.css("overflow-x","scroll");
+}
 $('.rounded-icon').hover(function(){
     $(this).toggleClass('shadow-sm');
     $(this).toggleClass('shadow');
