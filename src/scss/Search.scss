@@ -1,1 +1,116 @@
-@import 'all-import';
+@import './stylesheet.scss';
+.car-item {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #c3c4c8;
+    margin:5px;
+
+}
+
+
+.car-item:hover {
+    background-color: #eeeeee;
+    border: 1px solid #ffffff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    transform: perspective(50px) translate3d(0, 5px, 0);
+    transition: transform 0.35s;
+}
+
+.car-item h3 {
+    margin-top: 10px;
+}
+
+.car-item .comment {
+    width: 100% !important;
+    height: 100% !important;
+    margin: auto;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #ffffff;
+    text-align: center;
+    padding-top: 20%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    line-height: normal;
+    display: none;
+}
+
+.car-item .comment::after {
+
+    content: '';
+    border: 1px solid #ffffff;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    top: 5%;
+    right: 5%;
+
+}
+
+.shape {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 50px;
+    height: 21px;
+    background: #ed1c24;
+    color: #ffffff;
+    border-top: 5px solid #939498;
+}
+
+.shape::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 2px;
+    border-style: solid;
+    border-width: 10px 50px 0 0;
+    border-color: #ed1c24 transparent transparent transparent;
+}
+
+.like {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-top: 2px;
+    border: 1px solid #eee;
+    background: url("../img/like-gray.png") -19px 2px;
+
+}
+
+.like:hover {
+    background: url("../img/like-gray.png") #ffffff 0 2px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.filter_selected_span {
+    position: relative;
+    padding: 5px 5px 5px 15px;
+    min-width: 150px;
+    width: auto;
+    height: 30px;
+    display: inline-block;
+
+    margin-bottom: 10px;
+    color: #6d6e71;
+    background: #eeeeee;
+    font-size: 8pt !important;
+}
+
+.filter_selected_span .close {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    font-size: 1.2rem !important;
+    color: #ed1c24;
+
+}
+.breadcrumb {
+
+    background-color: #eeeeee !important;
+
+}
