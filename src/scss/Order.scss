@@ -36,6 +36,7 @@
     text-align: justify;
     color: $text-primary;
     letter-spacing: -.5px;
+    line-height: 30px;
 }
 a{
     color: $text-primary;
@@ -136,6 +137,7 @@ a{
         padding-right: 0;
         display: flex;
             .border{
+                font-size: 15px;
                 width: 36%;
                 &:last-child{
                     margin-right: 20px;
@@ -191,6 +193,9 @@ a{
                 >h4{
                     margin: 15px 0 !important;
                 }
+                img{
+                    height: 257px;
+                }
                 .card-body{
                     padding: 0 8px;
                     h4{
@@ -202,7 +207,7 @@ a{
     }
     .container.q-common{
         background-color: $secondary;
-        >h4{
+        >h5{
             margin-right: 62px;
         }
         .col-lg-6{
@@ -244,6 +249,7 @@ a{
                     margin-bottom: 0 !important;
                     img{
                         width: auto !important;
+                        height: 185px;
                     }
                     &:first-child{
                         margin-top:0 !important;
@@ -324,6 +330,18 @@ a{
         }
     }
 }
+@include med(992px, 768px){
+    .container.linked-cars{
+        .row{
+            .card{
+                img{
+                    width: 70%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
 @include medx(768px){
     @include details(1){
         .col-md{
@@ -357,6 +375,21 @@ a{
         .row{
             .col-sm-4{
                 padding: 8px 0 !important;
+                .media{
+                    .media-left{
+                        img{
+                            width:70px !important;
+                        }
+                    }
+                    .media-body{
+                        .media-heading{
+                            font-size: initial !important;
+                        }
+                        p{
+                            font-size: initial !important;
+                        }
+                    }
+                }
             }
         }
     }
