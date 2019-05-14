@@ -146,7 +146,7 @@ a{
             }
     }
     @include details(1){
-        .col-lg{
+        .col-md{
             &:not(:last-child){    
                 border-left: 1px solid $line-primary;
             }
@@ -197,10 +197,6 @@ a{
                         color: $primary;
                     }
                 }
-                img{
-                    width:342px;
-                    height: 257px;
-                }
             }
         }
     }
@@ -217,6 +213,23 @@ a{
             span{
                 font-size: 36px;
                 margin-bottom: 10px;
+            }
+        }
+    }
+    .container.work-list{
+        .row{
+            .col-sm-4{
+                padding: 0 .5rem;
+                &:first-child{
+                    padding-right: 0;
+                }
+                &:last-child{
+                    padding-left: 0;
+                }
+                .media{
+                    background-color: $secondary;
+                    padding: 18px 0;
+                }
             }
         }
     }
@@ -269,6 +282,82 @@ a{
             padding-left:0 !important;
         }
     }
+    @include details(2){
+        .col-lg-6{
+            &:nth-child(1){
+                .col-lg{
+                    border: 0 !important;
+                }
+            }
+            >h5{
+                border: 0;
+            }
+        }
+    }
+    .container.work-list{
+        .row{
+            .col-sm-4{
+                padding: 8px;
+                .media{
+                    .media-left{
+                        img{
+                            width:70px;
+                        }
+                    }
+                    .media-body{
+                        .media-heading{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container.linked-cars{
+        .row{
+            .card{
+                margin: auto 0 !important;
+            }
+        }
+    }
 }
 @include medx(768px){
+    @include details(1){
+        .col-md{
+                border: 0 !important;
+        }
+    }
+    .container.work-list{
+        .row{
+            .col-sm-4{
+                .media{
+                    .media-left{
+                        img{
+                            width:45px;
+                        }
+                    }
+                    .media-body{
+                        .media-heading{
+                            font-size: 15px;
+                        }
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include medx(575px){
+    .container.work-list{
+        .row{
+            .col-sm-4{
+                padding: 8px 0 !important;
+            }
+        }
+    }
 }
