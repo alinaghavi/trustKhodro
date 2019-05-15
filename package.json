@@ -49,7 +49,9 @@
     "lodash": "^4.17.11",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "node-sass": "^4.12.0",
-    "popper.js": "^1.14.7"
+    "nouislider": "^13.1.5",
+    "popper.js": "^1.14.7",
+    "rangeslider.js": "^2.3.2"
   },
   "keywords": [],
   "description": ""
