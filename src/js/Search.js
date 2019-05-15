@@ -1,16 +1,9 @@
-import '../scss/Search.scss'
+import '../scss/Search.scss';
+import "nouislider";
+import "nouislider/distribute/nouislider.css";
+import './wnumb-1.1.0/wNumb.js';
+
     // sidbar script
-
-    function showbox(tag) {
-
-        var ParentItem = $(tag).parent('.box-sid');
-
-        $('.box-sid-content', ParentItem).fadeToggle(100);
-        $('.Collapse-icon', ParentItem).fadeToggle(100);
-        $('.Collapse-down-icon', ParentItem).fadeToggle(100);
-
-    }
-
     //end  sidbar script
 
 
@@ -29,8 +22,15 @@ import '../scss/Search.scss'
 
     //filter selected close btn-click
 
+
     $('body').on('click', '.close', function () {
-        $(this).parents('.filter_selected_span').remove();
+        var $this = $(this);
+        $this.parents('.filter_selected_span').remove();
+        $('.checkbox').each(function(){
+            if($this.parent().attr("data-id") == $(this).attr("data-id")){
+                $(this).prop("checked" , false);
+            }
+        });
     });
     //end filter selected close btn-click
 
@@ -63,26 +63,34 @@ import '../scss/Search.scss'
 
     // top-search-by-price btn click
 
+    $('.price-search-see-cars-btn-wrap').eq(1).data("index" , 1);
+    $('.price-search-see-cars-btn-wrap').eq(2).data("index" , 2);
+    $('.price-search-see-cars-btn-wrap').eq(3).data("index" , 3);
 
-    $('.search_btn-by-price').click(function () {
-        filterSelected.find('.filter_selected_span').remove();
+    $('.price-search-see-cars-btn-wrap').click(function () {
+        var $this2 = $(this);
+        console.log($this2.attr("data-filter"));
+        $('.filter_selected_span').each(function(){
+            console.log($(this).attr("data-filter"));
+            if($(this).attr("data-filter") == $this2.attr("data-filter")){
+                console.log($(this).attr("data-filter"));
+                $(this).remove();
+            }
+        });
+        var SearchByPrice = $(this).parent();
+        var price1 = SearchByPrice.find(".num1").val();
+        var price2 = SearchByPrice.find(".num2").val();
 
-        var SearchByPrice = $('.search_by_price');
-        var price1 = SearchByPrice.find('#price1').val();
-        var price2 = SearchByPrice.find('#price2').val();
-        var len1 = price1.length;
-        var len2 = price2.length;
-
-        if (len1 > 0 && len2 > 0) {
-            var tag = ' <span class="filter_selected_span border rounded">' + 'از قیمت  ' + price1 + '  تا  ' + price2 + '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
+        if ($(this).data("index") == $('.price-search-see-cars-btn-wrap').eq(3).data("index")) {
+            var tag = ' <span class="filter_selected_span border rounded" data-filter="cost">' + 'از قیمت  ' + price1 + '  تا  ' + price2 + '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
             $(filterSelected).append(tag);
         }
-        if (len1 > 0 && len2 == 0) {
-            var tag = ' <span class="filter_selected_span border rounded">' + 'شروع قیمت از ' + price1 + '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
+        if ($(this).data("index") == $('.price-search-see-cars-btn-wrap').eq(2).data("index")) {
+            var tag = ' <span class="filter_selected_span border rounded" data-filter="use">' + 'از  ' + price1 + '  تا کیلومتر  ' + price2 + '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
             $(filterSelected).append(tag);
         }
-        if (len2 > 0 && len1 == 0) {
-            var tag = ' <span class="filter_selected_span border rounded">' + 'تا قیمت ' + price2 + '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
+        if ($(this).data("index") == $('.price-search-see-cars-btn-wrap').eq(1).data("index")) {
+            var tag = ' <span class="filter_selected_span border rounded" data-filter="type">' + 'از سال ' + price2 + ' تا '+ price2 +'<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
             $(filterSelected).append(tag);
         }
 
@@ -117,8 +125,9 @@ import '../scss/Search.scss'
     // end add filter select
 
 
-    var GearboxItem = $('.gearbox_item').click(function () {
-
+    $('.gearbox_item').click(function () {
+        $('.gearbox_item').removeClass('active');
+        $(this).addClass('active');
         var Id = $(this).attr('data-id');
         var filter_selected_span = filterSelected.find('span[data-id=' + Id + ']');
         var len = filter_selected_span.length;
@@ -130,4 +139,123 @@ import '../scss/Search.scss'
         $(filterSelected).append(tag);
 
     });
+    
+    $('.mob-setting').click(function(){
+        $('.side-bar').toggleClass('d-block');
+        $('.main-content').toggleClass('d-none');
+    });
 
+$(document).ready(function () {
+    var lowerNumber = document.getElementById('lower-number');
+    var upperNumber = document.getElementById('upper-number');
+    var slider = document.getElementById('slider');
+
+    noUiSlider.create(slider, {
+        start: [2011, 2014],
+        connect: true,
+        step : 1,
+        direction : "rtl",
+        range: {
+            'min': 2010,
+            'max': 2015
+        },
+        format: wNumb({
+            decimals: 0,
+        })
+    });
+
+
+    slider.noUiSlider.on('update', function (values, handle) {
+
+        var value = values[handle];
+
+        if (handle) {
+            upperNumber.value = value;
+        } else {
+            lowerNumber.value = value;
+        }
+    });
+
+    lowerNumber.addEventListener('change', function () {
+        slider.noUiSlider.set([this.value, null]);
+    });
+
+    upperNumber.addEventListener('change', function () {
+        slider.noUiSlider.set([null, this.value]);
+    });
+    $(".price-search-see-cars-btn-wrap").click(function(){
+       $
+    });
+});
+$(document).ready(function () {
+    var lowerNumber2 = document.getElementById('lower-number2');
+    var upperNumber2 = document.getElementById('upper-number2');
+    var slider2 = document.getElementById('slider2');
+    noUiSlider.create(slider2, {
+        start: [30000, 50000],
+        connect: true,
+        direction : "rtl",
+        step : 1,
+        range: {
+            'min': 30000,
+            'max': 50000
+        },
+        format: wNumb({
+            decimals: 0,
+        })
+    });
+    slider2.noUiSlider.on('update', function (values, handle) {
+
+        var value = values[handle];
+
+        if (handle) {
+            upperNumber2.value = value;
+        } else {
+            lowerNumber2.value = value;
+        }
+    });
+
+    lowerNumber2.addEventListener('change', function () {
+        slider2.noUiSlider.set([this.value, null]);
+    });
+
+    upperNumber2.addEventListener('change', function () {
+        slider2.noUiSlider.set([null, this.value]);
+    });
+});
+
+$(document).ready(function () {
+    var lowerNumber3 = document.getElementById('lower-number3');
+    var upperNumber3 = document.getElementById('upper-number3');
+    var slider3= document.getElementById('slider3');
+    noUiSlider.create(slider3, {
+        start: [300000000, 550000000],
+        connect: true,
+        step : 10000,
+        range: {
+            'min': 300000000,
+            'max': 550000000
+        },
+        format: wNumb({
+            decimals: 0,
+        })
+    });
+    slider3.noUiSlider.on('update', function (values, handle) {
+
+        var value = values[handle];
+
+        if (handle) {
+            upperNumber3.value = value;
+        } else {
+            lowerNumber3.value = value;
+        }
+    });
+
+    lowerNumber3.addEventListener('change', function () {
+        slider3.noUiSlider.set([this.value, null]);
+    });
+
+    upperNumber3.addEventListener('change', function () {
+        slider3.noUiSlider.set([null, this.value]);
+    });
+});
