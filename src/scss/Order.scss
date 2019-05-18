@@ -232,11 +232,15 @@ a{
                     padding-left: 0;
                 }
                 .media{
-                    img{
+                    background-color: $secondary;
+                    padding: 18px 14px;
+                    p{
+                        font-size: 1.188rem;
+                    }
+                    .media-middle{
+                        margin-left: .9rem;
                         align-self: center;
                     }
-                    background-color: $secondary;
-                    padding: 18px 0;
                 }
             }
         }
