@@ -232,6 +232,7 @@ $(document).ready(function () {
         start: [300000000, 550000000],
         connect: true,
         step : 10000,
+        direction : "rtl",
         range: {
             'min': 300000000,
             'max': 550000000
