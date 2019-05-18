@@ -223,7 +223,7 @@ a{
     }
     .container.work-list{
         .row{
-            .col-md-4{
+            .col-sm-4{
                 padding: 0 .5rem;
                 &:first-child{
                     padding-right: 0;
@@ -234,25 +234,6 @@ a{
                 .media{
                     background-color: $secondary;
                     padding: 18px 0;
-                }
-            }
-        }
-    }
-}
-@include medx (1200px){
-    .container.work-list{
-        .row{
-            .col-md-4{
-                padding: 8px;
-                .media{
-                    .media-body{
-                        .media-heading{
-                            font-variant-caps:all-petite-caps;
-                        }   
-                        p{
-                            font-size: 13px;
-                        }
-                    }
                 }
             }
         }
@@ -319,33 +300,32 @@ a{
             }
         }
     }
-    .container.linked-cars{
-        .row{
-            .card{
-                margin: auto 0 !important;
-            }
-        }
-    }
     .container.work-list{
         .row{
-            .col-md-4{
-                padding: 8px !important;
+            .col-sm-4{
+                padding: 8px;
                 .media{
                     .media-left{
                         img{
-                            width:70px !important;
+                            width:70px;
                         }
                     }
                     .media-body{
                         .media-heading{
-                            font-size: 19px;
+                            font-size: 20px;
                         }
                         p{
-                            padding: 17px;
                             font-size: 13px;
                         }
                     }
                 }
+            }
+        }
+    }
+    .container.linked-cars{
+        .row{
+            .card{
+                margin: auto 0 !important;
             }
         }
     }
@@ -370,7 +350,7 @@ a{
     }
     .container.work-list{
         .row{
-            .col-md-4{
+            .col-sm-4{
                 .media{
                     .media-left{
                         img{
@@ -379,10 +359,10 @@ a{
                     }
                     .media-body{
                         .media-heading{
-                            font-size: 1.5rem !important;
+                            font-size: 15px;
                         }
                         p{
-                            font-size: 1.188rem !important;
+                            font-size: 10px;
                         }
                     }
                 }
@@ -393,31 +373,20 @@ a{
 @include medx(575px){
     .container.work-list{
         .row{
-            .col-md-4{
-                padding: 8px 0 !important;  
+            .col-sm-4{
+                padding: 8px 0 !important;
                 .media{
                     .media-left{
                         img{
                             width:70px !important;
                         }
                     }
-                }
-            }
-        }
-    }
-}
-@include medx(1200px){
-    .container.work-list{
-        .row{
-            .col-md-4{
-                padding: 8px;
-                .media{
                     .media-body{
                         .media-heading{
-                            font-variant-caps:all-petite-caps;
-                        }   
+                            font-size: initial !important;
+                        }
                         p{
-                            font-size: 13px;
+                            font-size: initial !important;
                         }
                     }
                 }
