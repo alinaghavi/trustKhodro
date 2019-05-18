@@ -6,7 +6,10 @@ import 'malihu-custom-scrollbar-plugin';
 import '../js/jquery.mousewheel.js';
 var $container = $(".gallery");
 var $scroller = $(".scroll-h");
+var $container2 = $(".linked-cars");
+var $scroller2 = $(".row-compulsory");
 bindDragScroll($container, $scroller);
+bindDragScroll($container2, $scroller2);
 var isMobile = {
     Android: function() {
         return navigator.userAgent.match(/Android/i);
@@ -28,7 +31,8 @@ var isMobile = {
     }
 };
 if( isMobile.any() ){
-    $scroller.css("overflow-x","scroll");
+    $scroller.css("overflow-x" , "scroll");
+    $scroller2.css("overflow-x" , "scroll");
 }
 $('.rounded-icon').hover(function(){
     $(this).toggleClass('shadow-sm');
