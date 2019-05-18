@@ -259,6 +259,9 @@ a{
         }
     }
 @include medx (1200px){
+    .container{
+        max-width: 100%;
+    }
     .container.work-list{
         .row{
             .col-md-4{
@@ -269,7 +272,7 @@ a{
                             font-variant-caps:all-petite-caps;
                         }   
                         p{
-                            font-size: 13px;
+                            font-size: 18px;
                         }
                     }
                 }
