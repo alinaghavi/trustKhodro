@@ -1,90 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سفارش خودرو</title>
 </head>
 
-<body dir="rtl">
-
-    <div class="container" style="margin-top: 10px;">
+<body>
+<div class="wrapper">
+    <div class="container main-poster">
         <div class="row">
             <div class="col-3">
-                <img src="../../img/order-pic.png" class="img-fluid " alt="Responsive image" style="max-width:100%;height: auto;">
-
-
+                <img src="../../img/order-pic.png" class="img-fluid " alt="Responsive image"/>
             </div>
             <div class="col-6">
-
-                <img src="../../img/order-mokup.png" class="img-fluid" alt="Responsive image" style="max-width:100%;height: auto;">
-
+                <img src="../../img/order-mokup.png" class="img-fluid" alt="Responsive image"/>
             </div>
-            <div class="w-100"></div>
-            <div class="col" style="margin-top: 10px;">
-
+        </div>
+        <div class="main-poster-figure">
                 <h4>
                     خودروی مورد نظرت رو سفارش بده
                 </h4>
-
             </div>
-
-        </div>
     </div>
-
-
-
-    <div class="container border" style="background:#eee">
-
-        <BR>
-
-        <div class="row ">
-            <div class="col">
-
+    <div class="container border car-info">
+        <div class="row">
+            <div class="col-lg-4">
                 <select class="form-control">
                     <option>برند مورد نظر را انتخاب کنید </option>
                     <option>تویوتا</option>
                     <option> لکسوس</option>
                     <option> رنو</option>
-
                 </select>
-
             </div>
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
                 <select class="form-control">
                     <option>مدل مورد نظر را انتخاب کنید </option>
                     <option>C-HR</option>
                     <option> PRIUS</option>
                     <option> PRADO</option>
-
                 </select>
-
-
-
             </div>
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
                 <select class="form-control">
                     <option>تیپ مورد نظر را انتخاب کنید </option>
                     <option>E3</option>
                     <option> ES</option>
                     <option> ML</option>
-
                 </select>
-
             </div>
-
-        </div>
-        <br>
-
-        <div class="row">
-            <div class="col">
-
+            <div class="col-lg-4">
                 <select class="form-control">
                     <option>از سال</option>
                     <option>2011</option>
@@ -94,15 +60,8 @@
                     <option> 2015</option>
                     <option> 2016</option>
                 </select>
-
-
-
-
             </div>
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
                 <select class="form-control">
                     <option>تا سال</option>
                     <option>2011</option>
@@ -112,172 +71,94 @@
                     <option> 2015</option>
                     <option> 2016</option>
                 </select>
-
-
-
             </div>
-
-            <div class="col">
-
-
-
+            <div class="col-lg-4">
             </div>
-
-        </div>
-
-        <br>
-
-        <div class="row ">
-            <div class="col">
-
+            <div class="col-lg-4">
                 <input class="form-control" type="text" placeholder=" از قیمت">
-
             </div>
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
                 <input class="form-control" type="text" placeholder="تا قیمت">
-
-
-
             </div>
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
             </div>
-
-        </div>
-        <br>
-
-
-        <div class="row">
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
                 <input class="form-control" type="text" placeholder="از کارکرد">
-
-
-
-
             </div>
-
-            <div class="col">
-
-
+            <div class="col-lg-4">
                 <input class="form-control" type="text" placeholder="تا کارکرد">
-
-
             </div>
-            <div class="col">
-
-
-
-            </div>
-
-
-        </div>
-        <br>
-        <div class="row">
-
-            <div class="col">
-
-                <textarea class="form-control" id="validationTextarea" placeholder="توضیحات" required></textarea>
-
+            <div class="col-lg-4">
             </div>
         </div>
-        <br>
-        <div class="row">
-
-            <div class="col-3">
+        <div class="row textaria">
+            <div class="col-lg-8">
+                <textarea class="form-control" rows="6" id="validationTextarea" placeholder="توضیحات" required></textarea>
+            </div>
+        </div>
                 <button type="button" class="btn btn-info">ثبت اطلاعات و ادامه</button>
-
-            </div>
-
-        </div>
-        <br>
     </div>
-    <br>
-
-    <div class="container-fluid" style="background-color: #eee;padding: 10px;">
+    <div class="container-fluid">
         <div class="container">
-
-
             <h3>
                 تراست خودرو همینو برام بخر
             </h3>
             <p> اطلاعات خودروی مورد نظر خود را وارد نمایید تا کارشناسان ما گوش به زنگ باشند و به محض ورود خودروی مورد
                 نظر شما به مرکز تراست خودرو با شما تماس بگیرند</p>
-
-
         </div>
-
-
-
     </div>
-    <br>
-
     <!--navigation-->
-
-    <div class="container">
-
-        <div class="row ">
-            <div class="col-lg access">
-                <div class="fontmd col-12 text-justify">
-                    <span class="access-icon" style="background-position: -7px -30px"></span>
-                    <span>
-                        ثبت آگهی رایگان
-
-                    </span>
-                    <span>
-                        اطلاعات خودرو تو ثبت کن تا برای فروش در این سایت نمایش داده بشه
-
-                    </span>
+    <div class="container my-2 work-list">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="media border rounded">
+                        <div class="media-left media-middle">
+                            <img src="../../img/dashboardRegister/02.png" class="media-object">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">سفارش خودرو</h4>
+                            <p>خودرویی که می خوای رو پیدا نمیکنی
+                                همین حالا مشخصاتشو ثبت کن تا
+                                ما بارت پیداش کنیم
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg access">
-                <div class="fontmd col-12 text-justify ">
-                    <span class="access-icon" style="background-position: -105px -30px "></span>
-                    <span>
-                        سفارش خودرو
-                    </span>
-                    <span class="">
-                        خودرویی که میخوای و پیدا نمی کنی همین حالا مشخصاتش رو ثبت کن تا ما برات پیداش کنیم
-
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg access">
-                <div class="fontmd col-12 text-justify ">
-                    <span class="access-icon" style="background-position: -780px -30px "></span>
-                    <span>
-                        مشاوره تخصصی رایگان
-
-                    </span>
-                    <span>
-                        نیاز به کمک داری و دوست داری با یه کارشناس خبره مشورت کنی پس همین حالا کلیک کن
-                        می خوای خودرو تو بفروشی؟
-
-                    </span>
-                </div>
+                <div class="col-md-4">
+                        <div class="media border rounded">
+                            <div class="media-left media-middle">
+                                <img src="../../img/dashboardRegister/1.png" class="media-object">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">جستجوی خودروی کارکرده</h4>
+                                <p>اکه می خوای خودروی سالم و استاندارد 
+                                    پیدا کنی و خرید امنی داشته باشی
+                                    همین حالا جستجو کن
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                            <div class="media border rounded">
+                                <div class="media-left media-middle">
+                                    <img src="../../img/dashboardRegister/03.png" class="media-object">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">ارتباط با کارشناسان ما</h4>
+                                    <p>نیاز به کمک داری و دوست داری با یه 
+                                        کارشناس خبره کشورت ککنی پس 
+                                        همین حالا کلیک کن
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </div>
-
-    </div>
-
     <!--end navigation-->
-
-    <br>
     <!--porsesh haye motedavel-->
     <div class="container">
-
         <div class="row">
-
             <div class="col-12 accordion">
-
-
                 <div class="accordion" id="accordionExample">
                     <div class="card">
                         <div class="card-header" id="headingOne">
@@ -342,7 +223,7 @@
         </div>
     </div>
     <!--end porsesh haye motedavel-->
-
+</div>
 </body>
 
 </html>
