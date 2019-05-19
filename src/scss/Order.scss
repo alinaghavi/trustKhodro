@@ -1,4 +1,4 @@
-@import 'all-import';
+@import './all-import.scss';
 @mixin med ($max-w , $min-w){
         @media screen and (max-width: $max-w) and (min-width: $min-w){
             @content;
@@ -52,6 +52,10 @@ a{
     margin: 6.5px;
     width: 40px;
     height: 40px;
+    img{
+    width: 70%;
+    height: 70% !important;
+    }
 }
 .wrapper{
     margin: 36px 0;
@@ -206,26 +210,26 @@ a{
         }
     }
     .container.q-common{
-        background-color: $secondary;      
-        .btn:focus, .btn.focus {
-            box-shadow:none !important;
-        }
-        .card-header{
-          border:1px solid #eeeeee;
-            background: #eee;
-        }
-        .card-header:hover{
-            border-right:1px solid #ed1c24;
-            border-left:1px solid #ed1c24;
-        }
-        .box-sid-header {
-            width: 100%;
-            height: 100%;
-            min-height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin:0 0 5px 0;
+        background-color: $secondary;
+        margin-top: 1.2rem;
+        padding: 1rem;
+        .col-lg-6.q-common-items{
+            &:nth-child(odd){
+                padding: 1rem;
+                padding-right: .5rem;
+            }
+            &:nth-child(even){
+                padding: 1rem;
+                padding-left: .5rem;
+            }
+            .q-common-item{
+                background-color: white;
+                padding: 10px;  
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
         }
     }
     .container.work-list{

@@ -1,9 +1,6 @@
 import './all-import.js';
 import '../scss/Order.scss';
 import bindDragScroll from './jQuery-Plugin-Drag-To-Scroll-dragScroll/dragScroll.js';
-import '../css/jquery.mCustomScrollbar.css';
-import 'malihu-custom-scrollbar-plugin';
-import '../js/jquery.mousewheel.js';
 var $container = $(".gallery");
 var $scroller = $(".scroll-h");
 bindDragScroll($container, $scroller);
