@@ -1,16 +1,40 @@
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1200px
-);
 @import '~bootstrap/scss/bootstrap';
-$primary : rgb(254, 0, 0);
-$secondary : rgb(235, 235, 235);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px
+);
+
+$primary : #fe0000;
+$secondary : #ebebeb;
 $text-primary: #6d6e71;
 $line-primary: #e6e6e6;
 $font-stack:    Homa, sans-serif;
 
 body, p {
   font-family: $font-stack;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin box_shadow ($level) {
+
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
 }

@@ -1,13 +1,96 @@
 @import 'all-import';
 
-.carousel-indicators {
-  justify-content: flex-start;
-}
+#header-wrapper {
+  .carousel-indicators {
+    justify-content: flex-start;
+    margin-right: 14%;
 
-.carousel-indicators {
-  li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  #search-wrapper {
+    position: relative;
+    top: -70px;
+    z-index: 20;
+
+    > div a .icons {
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        width: 45px;
+        margin-top: 2px;
+        margin-left: 5px;
+      }
+    }
+
+    .btns {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 55px;
+      background-color: #ffffff;
+      border: 1px solid $primary;
+      color: $text-primary;
+      text-decoration: none;
+      font-size: 19px;
+
+      &:hover {
+        background-color: $primary;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+      }
+    }
+
+    #search-btn img {
+      width: 70px;
+      margin-top: 8px;
+    }
+
+    #search-module {
+      > div {
+        border: 1px solid #c4c4c4;
+        border-top: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+        @include box_shadow(1);
+        &:before{
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 0 solid transparent;
+          border-bottom: 18px solid #ffffff;
+          border-left: 13px solid transparent;
+          border-right: 13px solid transparent;
+          position: absolute;
+          top: -16px;
+          right: 30px;
+        }
+        #link-wrapper{
+          padding: 10px 0;
+          border-bottom: 1px solid #dcdee1;
+          a{
+            color: $text-primary;
+            font-size: 19px;
+            margin-left: 30px;
+          }
+        }
+        #form-wrapper{
+          #brand-search{
+            display: none;
+          }
+          #price-search{
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
