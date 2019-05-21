@@ -217,14 +217,7 @@ a{
         margin-top: 1.2rem;
         padding: 1rem;
         .col-lg-6.q-common-items{
-            &:nth-child(odd){
-                padding: 1rem;
-                padding-right: .5rem;
-            }
-            &:nth-child(even){
-                padding: 1rem;
-                padding-left: .5rem;
-            }
+            padding: .5rem;
             .q-common-item{
                 background-color: white;
                 padding: 10px;  
