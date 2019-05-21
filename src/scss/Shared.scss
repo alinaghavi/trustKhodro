@@ -9,22 +9,6 @@
     @content;
 }
 }
-@mixin details($n) {
-    .container .card.details-#{$n}{
-        padding: 6px 22px;
-        .card-footer{
-            background-color: $secondary !important;
-            h3{
-                text-align: center;
-            }
-    }
-    .card-body{
-        .row{
-            @content;
-        }
-    }
-}
-}
 @function headings($from:1, $to:6) {
 @if $from == $to {
     @return 'h#{$from}';
@@ -66,7 +50,7 @@ color: $text-primary;
                     content: "";
                     display: inline-block;
                     position: absolute;
-                    bottom: 7.4rem;
+                    bottom: 8.8rem;
                     left: 1rem;
                     border-top: 0;
                     border-right: 0.3em solid transparent;
@@ -113,12 +97,37 @@ color: $text-primary;
                 height: 8px;
             }
         }
-        .nav{
+        .nav-header{
             align-items: center;
-            img{
-                margin-left: 1.8rem;
+            display: flex;
+        }
+        img{
+            margin-left: 1.8rem;
+        }
+        .sm-nav-header-icon{
+            display: none;
+        }
+    }
+}
+@include medx(838px){
+    .h-wrapper{
+        .container-fluid{
+            .sm-nav-header-icon{
+                display: block;
+            }
+            .nav-header{
+                position: fixed;
+                right: 0;
+                left: 0;
+                top:10rem;
+                display: none;
+                span{
+                    display: none;
+                }                
+                a,li{
+                    text-align:center;
+                }
             }
         }
     }
 }
-  
