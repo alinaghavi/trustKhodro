@@ -10,21 +10,19 @@ $container-max-widths: (
 $break-small: 900px;
 $break-large: 1200px;
 
-
-$primary : #fe0000;
-$secondary : #ebebeb;
+$primary: #fe0000;
+$secondary: #ebebeb;
 $text-primary: #6d6e71;
 $line-primary: #e6e6e6;
-$font-stack:    Homa, sans-serif;
+$font-stack: Homa, sans-serif;
 $heading-color: #6d6e71;
 
-body{
-  width:100%;
+body {
+  width: 100%;
   height: 100%;
 }
 
-
-body, p ,li {
+body, p, li {
   font-family: $font-stack;
 }
 
@@ -34,7 +32,7 @@ a {
   }
 }
 
-ul{
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -44,37 +42,39 @@ input:focus, textarea {
   outline: none !important;
 }
 
-*:focus {outline:none !important}
+*:focus {
+  outline: none !important
+}
 
-.hidden{
+.hidden {
   display: none;
 }
 
-@mixin box_shadow ($level) {
+@mixin box_shadow($level) {
 
   @if $level == 1 {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   } @else if $level == 2 {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   } @else if $level == 3 {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   } @else if $level == 4 {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   } @else if $level == 5 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   }
 
 }
 
-@mixin rotate-yasin ($degrees) {
-  -webkit-transform: rotate($degrees)translate3d(-.8rem,-.9rem,0rem);
-  -moz-transform: rotate($degrees) translate3d(-.8rem,-.9rem,0rem);
-  -ms-transform: rotate($degrees) translate3d(-.8rem,-.9rem,0rem);
-  -o-transform: rotate($degrees) translate3d(-.8rem,-.9rem,0rem);
-  transform: rotate($degrees) translate3d(-.8rem,-.9rem,0rem);
+@mixin rotate-yasin($degrees) {
+  -webkit-transform: rotate($degrees) translate3d(-.8rem, -.9rem, 0rem);
+  -moz-transform: rotate($degrees) translate3d(-.8rem, -.9rem, 0rem);
+  -ms-transform: rotate($degrees) translate3d(-.8rem, -.9rem, 0rem);
+  -o-transform: rotate($degrees) translate3d(-.8rem, -.9rem, 0rem);
+  transform: rotate($degrees) translate3d(-.8rem, -.9rem, 0rem);
 }
 
-@mixin rotate ($degrees) {
+@mixin rotate($degrees) {
   -webkit-transform: rotate($degrees);
   -moz-transform: rotate($degrees);
   -ms-transform: rotate($degrees);
@@ -92,6 +92,7 @@ input:focus, textarea {
 
 div.select-box-wrapper {
   position: relative;
+
   &:after {
     content: "";
     display: block;
@@ -101,7 +102,7 @@ div.select-box-wrapper {
     border-right: 1px solid #434547;
     position: absolute;
     left: 10px;
-    top:6px;
+    top: 6px;
     @include rotate(136deg);
   }
 
@@ -115,10 +116,10 @@ div.select-box-wrapper {
   }
 }
 
-.info-items{
-  ul{
-    li{
-      &:before{
+.info-items {
+  ul {
+    li {
+      &:before {
         content: '';
         display: block;
         width: 6px;
@@ -128,6 +129,7 @@ div.select-box-wrapper {
         @include rotate(45deg);
         margin-left: 7px;
       }
+
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -147,10 +149,10 @@ div.select-box-wrapper {
   }
 }
 
-.info-items-yasin{
-  ul{
-    li{
-      &:before{
+.info-items-yasin {
+  ul {
+    li {
+      &:before {
         content: '';
         display: block;
         width: 6px;
@@ -160,6 +162,7 @@ div.select-box-wrapper {
         @include rotate-yasin(45deg);
         margin-left: 7px;
       }
+
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -178,6 +181,6 @@ div.select-box-wrapper {
   padding-bottom: 10px;
 }
 
-.car-slider{
+.car-slider {
   direction: ltr !important;
 }
