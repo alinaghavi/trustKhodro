@@ -1,16 +1,127 @@
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1200px
-);
 @import '~bootstrap/scss/bootstrap';
-$primary : rgb(254, 0, 0);
-$secondary : rgb(235, 235, 235);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px
+);
+
+$primary : #fe0000;
+$secondary : #ebebeb;
 $text-primary: #6d6e71;
 $line-primary: #e6e6e6;
 $font-stack:    Homa, sans-serif;
+$heading-color: #6d6e71;
+
+body{
+  width:100%;
+  height: 100%;
+}
 
 body, p {
   font-family: $font-stack;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input:focus, textarea {
+  outline: none !important;
+}
+
+*:focus {outline:none !important}
+
+.hidden{
+  display: none;
+}
+
+@mixin box_shadow ($level) {
+
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+}
+
+@mixin rotate ($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+
+div.select-box-wrapper {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #434547;
+    border-right: 1px solid #434547;
+    position: absolute;
+    left: 10px;
+    top:6px;
+    @include rotate(136deg);
+  }
+
+  select {
+    padding: 0 20px;
+    border: 0;
+    border-left: 1px solid $heading-color;
+    color: $text-primary;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.info-items{
+  ul{
+    li{
+      &:before{
+        content: '';
+        display: block;
+        width: 6px;
+        height: 12px;
+        border: solid $primary;
+        border-width: 0 3px 3px 0;
+        @include rotate(45deg);
+        margin-left: 7px;
+      }
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: right;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 30px;
+    }
+  }
+}
+
+.section-title {
+  font-size: 22px;
+  color: $heading-color;
+  text-align: center;
+  padding-bottom: 10px;
 }
