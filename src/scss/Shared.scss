@@ -1,10 +1,51 @@
 @import 'all-import';
-h1,h2,h3,h4,h5,h6,p,a{
-    color: $text-primary;
+@mixin med ($max-w , $min-w){
+    @media screen and (max-width: $max-w) and (min-width: $min-w){
+        @content;
+    }
+}
+@mixin medx ($max-w) {
+@media screen and (max-width: $max-w){
+    @content;
+}
+}
+@mixin details($n) {
+    .container .card.details-#{$n}{
+        padding: 6px 22px;
+        .card-footer{
+            background-color: $secondary !important;
+            h3{
+                text-align: center;
+            }
+    }
+    .card-body{
+        .row{
+            @content;
+        }
+    }
+}
+}
+@function headings($from:1, $to:6) {
+@if $from == $to {
+    @return 'h#{$from}';
+} @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+}
+}
+#{headings(1,6)},p {
+color: $text-primary;
     text-align: right;
     &:hover{
         color: $text-primary;
     }
+letter-spacing: -.5px;
+line-height: 30px;
+}
+a{
+color: $text-primary;
+&:hover{
+    color: $text-primary;
+}
 }
 .h-wrapper{
     background-color: white;
