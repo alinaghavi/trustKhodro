@@ -6,7 +6,7 @@
         @return 'h#{$from},' + headings($from+1, $to);
     }
 }
-#{headings(1,6)},p {
+#{headings(1,6)},p,li {
     text-align: justify;
     color: $text-primary;
     letter-spacing: -.5px;
