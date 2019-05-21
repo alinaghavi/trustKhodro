@@ -1,4 +1,3 @@
-import './all-import.js';
 import '../scss/Order.scss';
 import bindDragScroll from './jQuery-Plugin-Drag-To-Scroll-dragScroll/dragScroll.js';
 var $container = $(".gallery");
