@@ -140,6 +140,15 @@ import './wnumb-1.1.0/wNumb.js';
 
     });
     
+    $(window).resize(function(){
+        if($(window).width() >= 768){
+            $('.main-content').addClass('d-block');
+        }
+        else {
+            $('.main-content').removeClass('d-block');
+        }
+    });
+
     $('.mob-setting').click(function(){
         $('.side-bar').toggleClass('d-block');
         $('.main-content').toggleClass('d-none');

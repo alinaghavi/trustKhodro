@@ -28,8 +28,13 @@
 .d-none{
     display:none;
 }
+.d-block-with-out-important{
+    display: block;
+}
 .container{
-    
+    .nav.nav-tabs{
+        justify-content:center;
+    }
     .car-item {
         position: relative;
         background-color: #ffffff;
@@ -264,6 +269,7 @@
                 .search_btn-by-brand,.search_btn-by-price{
                     background-color: $primary;
                     color: white;
+                    border-radius: 0;
                 }
             }
         }
