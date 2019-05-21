@@ -1,4 +1,4 @@
-@import 'all-import';
+@import './all-import.scss';
 @mixin med ($max-w , $min-w){
         @media screen and (max-width: $max-w) and (min-width: $min-w){
             @content;
@@ -52,6 +52,10 @@ a{
     margin: 6.5px;
     width: 40px;
     height: 40px;
+    img{
+    width: 70%;
+    height: 70% !important;
+    }
 }
 .wrapper{
     margin: 36px 0;
@@ -210,29 +214,24 @@ a{
     }
     .container.q-common{
         background-color: $secondary;
-        margin-top: .8rem;
-        padding: 1.5rem .9rem .8rem;
-        >h4{
-            margin-right: 2rem;
-        }
-        .row{
-            .col-lg-6{
-                &:nth-child(odd){
-                    padding: 1rem 1rem 1rem .5rem;
-                }
-                &:nth-child(even){
-                    padding: 1rem .5rem 1rem 1rem;
-                }
-                .q-common-item{
-                    padding: 1rem .7rem;
-                    background-color: white;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    img{
-                        height: 20px;
-                    }
-                }
+        margin-top: 1.2rem;
+        padding: 1rem;
+        .col-lg-6.q-common-items{
+            &:nth-child(odd){
+                padding: 1rem;
+                padding-right: .5rem;
+            }
+            &:nth-child(even){
+                padding: 1rem;
+                padding-left: .5rem;
+            }
+            .q-common-item{
+                background-color: white;
+                padding: 10px;  
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
             }
         }
     }
