@@ -1,1 +1,83 @@
 @import 'all-import';
+h1,h2,h3,h4,h5,h6,p,a{
+    color: $text-primary;
+    text-align: right;
+    &:hover{
+        color: $text-primary;
+    }
+}
+.h-wrapper{
+    background-color: white;
+    .container-fluid{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .login-about{
+            background-image: linear-gradient(yellow,white);
+            padding: 1rem;
+            .dropdown-menu{
+                border: 0;
+                border-top: 4px solid $primary;
+                top: 14px !important;
+                left: -17px !important;
+                border-radius: 0;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 7.4rem;
+                    left: 1rem;
+                    border-top: 0;
+                    border-right: 0.3em solid transparent;
+                    border-bottom: .3rem solid $primary;
+                    border-left: 0.3em solid transparent;
+                }
+                .login-profile{
+                    padding: 0 1rem;
+                    .btn{
+                        width: 10rem;
+                        height: 1.8rem;
+                        padding: 0;
+                        margin: .5rem 0;
+                        &:hover{
+                            color: white !important;
+                        }
+                    }
+                    h6{
+                        img{
+                            margin-left:10px;
+                        }
+                        &:nth-child(2){
+                            a{
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+            .d-flex{
+                img{
+                    margin-left: 5px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            .dropdown-icon{
+                transform: rotateZ(45deg);
+                display: inline-block;
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                margin-right: 5px;
+                width: 8px;
+                height: 8px;
+            }
+        }
+        .nav{
+            align-items: center;
+            img{
+                margin-left: 1.8rem;
+            }
+        }
+    }
+}
+  
