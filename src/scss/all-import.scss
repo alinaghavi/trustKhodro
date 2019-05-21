@@ -73,12 +73,15 @@ input:focus, textarea {
   transform: rotate($degrees);
 }
 
+<<<<<<< HEAD
 @mixin calc($property, $expression) {
   #{$property}: -moz-calc(#{$expression});
   #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
 
+=======
+>>>>>>> All import changed
 
 div.select-box-wrapper {
   position: relative;
@@ -125,9 +128,12 @@ div.select-box-wrapper {
       font-size: 15px;
       font-weight: normal;
       line-height: 30px;
+<<<<<<< HEAD
       @media screen and (max-width: $break-small) {
         justify-content: center;
       }
+=======
+>>>>>>> All import changed
     }
   }
 }
@@ -137,8 +143,11 @@ div.select-box-wrapper {
   color: $heading-color;
   text-align: center;
   padding-bottom: 10px;
+<<<<<<< HEAD
 }
 
 .car-slider{
   direction: ltr !important;
+=======
+>>>>>>> All import changed
 }
