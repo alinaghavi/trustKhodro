@@ -1,1 +1,423 @@
 @import 'all-import';
+
+#header-wrapper {
+  .carousel-indicators {
+    justify-content: flex-start;
+    margin-right: 14%;
+
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  #search-wrapper {
+    position: relative;
+    top: -70px;
+    z-index: 20;
+    @media screen and (max-width: $break-small) {
+      top: 015px;
+    }
+
+    > div a .icons {
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        width: 45px;
+        margin-top: 2px;
+        margin-left: 5px;
+      }
+    }
+
+    .btns {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 55px;
+      background-color: #ffffff;
+      border: 1px solid $primary;
+      color: $text-primary;
+      text-decoration: none;
+      font-size: 19px;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: $primary;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+      }
+    }
+
+    #search-car-btn img {
+      width: 70px;
+      margin-top: 8px;
+    }
+
+    #search-module {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 60px;
+
+      > div {
+        border: 1px solid #c4c4c4;
+        border-top: 0;
+        margin-top: 10px;
+        background-color: #ffffff;
+        @include box_shadow(1);
+
+        &:before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 0 solid transparent;
+          border-bottom: 18px solid #ffffff;
+          border-left: 13px solid transparent;
+          border-right: 13px solid transparent;
+          position: absolute;
+          top: -16px;
+          right: 30px;
+        }
+
+        #link-wrapper {
+          padding: 10px 0;
+          border-bottom: 1px solid #dcdee1;
+
+          a {
+            color: $text-primary;
+            font-size: 19px;
+            margin-left: 30px;
+          }
+        }
+
+        #form-wrapper {
+          #brand-search {
+            display: none;
+            padding: 15px 0;
+          }
+
+          .search-section-wrapper {
+            display: flex;
+            justify-content: flex-start;
+          }
+
+          .search-search-btn-wrapper {
+            display: flex;
+            justify-content: flex-end;
+
+            input[type="submit"] {
+              width: 180px;
+              background: transparent;
+              border: 1px solid $primary;
+              color: $text-primary;
+              border-radius: 5px;
+              padding: 5px 0;
+              font-size: 19px;
+            }
+          }
+
+          #price-search {
+            display: none;
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#info-wrapper {
+  #kharid-section {
+    width: 100%;
+    height: 350px;
+    background: url("../img/homepage/kharid-photo.png") no-repeat top;
+  }
+
+  #foroosh-section {
+    width: 100%;
+    height: 350px;
+    background: url("../img/homepage/phorosh-photo.png") no-repeat top;
+  }
+
+  .info-content {
+    position: absolute;
+    top: 175px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @media screen and (max-width: $break-small) {
+      align-items: center;
+    }
+
+    .info-header {
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 4px solid $primary;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+#warranty-wrapper {
+  width: 100%;
+  background-color: #e6e6e6;
+  padding: 20px 0;
+
+  #warranty-wrapper-first {
+    background: url("../img/homepage/kashenac.png") no-repeat center;
+  }
+
+  #warranty-wrapper-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    #info-text {
+      .text-item {
+        text-align: right;
+        font-size: 17px;
+        color: $text-primary;
+        padding: 6px 0;
+
+        &:last-child {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  #warranty-wrapper-third {
+    ul li {
+      line-height: 23px;
+      font-weight: normal
+    }
+  }
+}
+
+#brands-wrapper {
+  padding: 20px 0;
+
+  #brand-items-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      display: block;
+      width: 30%;
+      text-align: center;
+
+      .brand-item {
+        padding: 20px 0;
+        border: 1px solid #e6e7e8;
+        transition: transform .2s;
+
+        &:hover {
+          transform: scale(1.1);
+          @include box_shadow(1);
+        }
+      }
+    }
+  }
+}
+
+#why-trust-wrapper {
+  width: 100%;
+  background-color: #e6e6e6;
+  padding: 20px 0;
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .why-trust-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .item-icon {
+      height: 130px;
+    }
+
+    .item-title {
+      color: #6b6e71;
+      font-size: 18px;
+    }
+  }
+}
+
+.car-slider-wrapper {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+
+  .right-wrapper {
+    width: 95%;
+    background-color: #ffffff;
+    height: 100%;
+
+    .slick-prev {
+      display: none !important;
+    }
+
+    .slick-next {
+      position: absolute;
+      left: -21px;
+      @include calc(top, '50% - 20px');
+      border: 5px solid #6d6e71;
+      border-top: 0;
+      border-right: 0;
+      width: 26px;
+      height: 26px;
+      text-indent: -1000px;
+      overflow: hidden;
+      @include rotate(43deg);
+      background: transparent;
+      @media screen and (max-width: $break-small) {
+        width: 12px;
+        height: 16px;
+        left: -3px
+      }
+    }
+
+    .top-border {
+      width: 100%;
+      text-align: right;
+      background-color: #e6e6e6;
+      border-right: 1px solid #e6e6e6;
+      height: 25px;
+
+      a {
+        color: $primary;
+        padding-right: 25px;
+      }
+    }
+
+    .car-slider {
+      border: 1px solid #cccccc;
+      box-sizing: border-box;
+      border-top: 0;
+      border-left: 0;
+      position: relative;
+      padding-right: 115px;
+
+      .trust-ads {
+        width: 152px;
+        height: 103px;
+        background: url("../img/homepage/trust-ads.png") no-repeat center;
+        position: absolute;
+        right: -40px;
+        @include calc(top, '50% - 52px');
+        @media screen and (max-width: $break-small) {
+          right: 0;
+        }
+      }
+
+      .personal-ads {
+        width: 152px;
+        height: 103px;
+        background: url("../img/homepage/personal-ads.png") no-repeat center;
+        position: absolute;
+        right: -40px;
+        @include calc(top, '50% - 52px');
+        @media screen and (max-width: $break-small) {
+          right: 0;
+        }
+      }
+
+      .slider-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        direction: rtl;
+
+        .slider-title {
+          color: $text-primary;
+          font-size: 20px;
+          padding: 7px 0;
+        }
+
+        .slider-image {
+          img {
+            width: 190px;
+            border-radius: 25px;
+            padding: 7px 0;
+          }
+        }
+
+        .slider-price {
+          padding: 7px 0;
+          color: $text-primary;
+          font-size: 16px;
+
+          span {
+            color: $primary;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .left-wrapper {
+    width: 60px;
+    -webkit-box-shadow: 2px 0 3px -2px #888;
+    box-shadow: 2px 0 3px -2px #888;
+  }
+}
+
+#article-wrapper {
+  margin-bottom: 100px;
+
+  .article-section-header {
+    color: $text-primary;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 15px;
+
+    &:before, &:after {
+      content: '';
+      border-top: 2px solid;
+      margin: 0 20px 0 0;
+      flex: 1 0 20px;
+    }
+
+    &:before {
+      margin: 5px 0 0 20px;
+    }
+  }
+
+  .article-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .article-img {
+
+    }
+
+    .article-header {
+      font-size: 18px;
+      color: $text-primary;
+      padding: 15px 0;
+    }
+  }
+}
