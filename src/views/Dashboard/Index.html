@@ -16,20 +16,23 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://via.placeholder.com/1920x555" class="d-block w-100" alt="تراست خودرو">
+                <img src="../../img/slider/1.jpg" class="d-block w-100" alt="تراست خودرو">
             </div>
             <div class="carousel-item">
-                <img src="https://via.placeholder.com/1920x555" class="d-block w-100" alt="تراست خودرو">
+                <img src="../../img/slider/2.jpg" class="d-block w-100" alt="تراست خودرو">
             </div>
             <div class="carousel-item">
-                <img src="https://via.placeholder.com/1920x555" class="d-block w-100" alt="تراست خودرو">
+                <img src="../../img/slider/3.jpg" class="d-block w-100" alt="تراست خودرو">
+            </div>
+            <div class="carousel-item">
+                <img src="../../img/slider/4.jpg" class="d-block w-100" alt="تراست خودرو">
             </div>
         </div>
     </div>
     <div class="container" id="search-wrapper">
         <div class="row justify-content-center">
             <div class="col-md-3">
-                <a href="#" class="btns" id="search-btn">
+                <a href="#" class="btns" id="search-car-btn">
                     <span class="icons">
                         <img src="../../img/search.svg"/>
                     </span>
@@ -53,7 +56,7 @@
                 </a>
             </div>
         </div>
-        <div class="row justify-content-center" id="search-module">
+        <div class="row justify-content-center hidden" id="search-module">
             <div class="col-md-9 text-right">
                 <div class="col-md-12" id="link-wrapper">
                     <a href="" rel="brand-search">بر اساس برند</a>
@@ -61,18 +64,533 @@
                 </div>
                 <div class="col-md-12" id="form-wrapper">
                     <div id="brand-search">
-                        <form method="">
-                            <select class="select-box" name="state">
-                                <option value="AL">تویوتا</option>
-                                <option value="WY">لکسوس</option>
-                            </select>
+                        <form method="" class="row">
+                            <div class="search-section-wrapper col-md-6">
+                                <div class="select-box-wrapper">
+                                    <select class="select-box" name="brand">
+                                        <option value="AL">برند</option>
+                                        <option value="AL">تویوتا</option>
+                                        <option value="WY">لکسوس</option>
+                                    </select>
+                                </div>
+                                <div class="select-box-wrapper">
+                                    <select class="select-box" name="model">
+                                        <option value="AL">مدل</option>
+                                        <option value="AL">تویوتا</option>
+                                        <option value="WY">لکسوس</option>
+                                    </select>
+                                </div>
+                                <div class="select-box-wrapper">
+                                    <select class="select-box" name="tip">
+                                        <option value="AL">تیپ</option>
+                                        <option value="AL">تویوتا</option>
+                                        <option value="WY">لکسوس</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search-search-btn-wrapper col-md-6">
+                                <input type="submit" value="جستجو" name="">
+                            </div>
                         </form>
                     </div>
                     <div id="price-search">
-                        search price
+                        <form method="" class="row">
+                            <div class="search-section-wrapper col-md-6">
+                                <div class="select-box-wrapper">
+                                    <select class="select-box" name="brand">
+                                        <option value="AL">برند</option>
+                                        <option value="AL">تویوتا</option>
+                                        <option value="WY">لکسوس</option>
+                                    </select>
+                                </div>
+                                <div class="select-box-wrapper">
+                                    <select class="select-box" name="model">
+                                        <option value="AL">مدل</option>
+                                        <option value="AL">تویوتا</option>
+                                        <option value="WY">لکسوس</option>
+                                    </select>
+                                </div>
+                                <div class="select-box-wrapper">
+                                    <select class="select-box" name="tip">
+                                        <option value="AL">تیپ</option>
+                                        <option value="AL">تویوتا</option>
+                                        <option value="WY">لکسوس</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search-search-btn-wrapper col-md-6">
+                                <input type="submit" value="جستجو" name="">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="info-wrapper">
+    <div class="row">
+        <div class="col-md-6" id="kharid-section">
+            <div class="info-content">
+                <h2 class="info-header">
+                    خودروی دلخواه خود را پیدا کنید
+                </h2>
+                <div class="info-items w-100">
+                    <ul>
+                        <li>
+                            خودروهای کارشناسی شده به لحاظ سلامت فنی و بدنه
+                        </li>
+                        <li>
+                            تست و بررسی شده توسط شرکتهای ایرتویا و نگین خودرو
+                        </li>
+                        <li>
+                            مشاوره تخصصی بر اساس بودجه و تخصص شما
+                        </li>
+                        <li>
+                            امکان استفاده از تسهیلات نقدی اعتباری(اقساطی)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="foroosh-section">
+            <div class="info-content">
+                <h2 class="info-header">
+                    فروش آسان و سریع خودرو شما
+                </h2>
+                <div class="info-items w-100">
+                    <ul>
+                        <li>
+                            ارزش گذاری و تعیین قیمت واقعی توسط کارشناسان
+                        </li>
+                        <li>
+                            امکان معاوضه خودرو
+                        </li>
+                        <li>
+                            حذف واسطه جهت ایجاد حاشیه امن در روند فروش خودرو
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="warranty-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" id="warranty-wrapper-first">
+            </div>
+            <div class="col-md-4" id="warranty-wrapper-second">
+                <div class="info-banner">
+                    <img src="../../img/homepage/karshenasi-banner.png" alt="">
+                </div>
+                <div id="info-text">
+                    <div class="text-item">گواهی سلامت فنی و بدنه شامل 160 مورد</div>
+                    <div class="text-item">با پشتیبانی فنی شرکت های ایرتویا و نگین خودرو</div>
+                </div>
+            </div>
+            <div class="col-md-4 info-items" id="warranty-wrapper-third">
+                <ul>
+                    <li>
+                        33 مورد تست ارزیابی عملکرد موتور
+                    </li>
+                    <li>
+                        12 مورد بررسی سیستم فرمان
+                    </li>
+                    <li>
+                        15 مورد بررسی سیستم تایر و جلوبندی
+                    </li>
+                    <li>
+                        14 مورد بررسی سیستم ترمز
+                    </li>
+                    <li>
+                        2 مورد بررسی زیر خودرو و شاسی
+                    </li>
+                    <li>
+                        12 مورد بررسی صندوق عقب و لوازم جانبی آن
+                    </li>
+                    <li>
+                        6 مورد تست برق
+                    </li>
+                    <li>
+                        2 مورد بررسی دستگاه عیب یاب
+                    </li>
+                    <li>
+                        14 مورد بررسی سیستم گیربکس و قدرت
+                    </li>
+                    <li>
+                        12 مورد بررسی سیستم هشدار دهنده ها
+                    </li>
+                    <li>
+                        10 مورد بررسی سیستم الکترونیکی و صفحه نمایش
+                    </li>
+                    <li>
+                        8 مورد بررسی سیستم روشنایی
+                    </li>
+                    <li>
+                        2 مورد بررسی دستگاه عیب یاب
+                    </li>
+                    <li>
+                        18 مورد بررسی بازدید داخلی - آیتم های اضافه
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="brands-wrapper">
+    <div class="section-title">
+        برای دیدن خودروهای موجود، بر روی برند مورد نظر کیلک کنید.
+    </div>
+    <div id="brand-items-wrapper">
+        <a href="#">
+            <div class="brand-item">
+                <img src="../../img/homepage/toyotaLogo.png" alt="toyota">
+            </div>
+        </a>
+        <a href="#">
+            <div class="brand-item">
+                <img src="../../img/homepage/renaultLogo.png" alt="Renault">
+            </div>
+        </a>
+        <a href="#">
+            <div class="brand-item">
+                <img src="../../img/homepage/lexusLogo.png" alt="Lexus">
+            </div>
+        </a>
+    </div>
+</div>
+
+<div id="why-trust-wrapper">
+    <div class="section-title">
+        چرا تراست خودرو؟
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 why-trust-item">
+                <div class="item-icon">
+                    <img src="../../img/homepage/t1.svg" alt="">
+                </div>
+                <div class="item-title">
+                    ثبت آگهی رایگان
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 why-trust-item">
+                <div class="item-icon">
+                    <img src="../../img/homepage/t2.svg" alt="">
+                </div>
+                <div class="item-title">
+                    مشاوره تخصصی
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 why-trust-item">
+                <div class="item-icon">
+                    <img src="../../img/homepage/t3.svg" alt="">
+                </div>
+                <div class="item-title">
+                    ارائه گواهی
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 why-trust-item">
+                <div class="item-icon">
+                    <img src="../../img/homepage/t4.svg" alt="">
+                </div>
+                <div class="item-title">
+                    خرید اقصاطی
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 why-trust-item">
+                <div class="item-icon">
+                    <img src="../../img/homepage/t5.svg" alt="">
+                </div>
+                <div class="item-title">
+                    قیمت گذاری منطقی
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 why-trust-item">
+                <div class="item-icon">
+                    <img src="../../img/homepage/t6.svg" alt="">
+                </div>
+                <div class="item-title">
+                    تجربه ای ماندگار
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container car-slider-wrapper p-0">
+    <div class="col-md-12 p-0 d-flex">
+        <div class="right-wrapper">
+            <div class="top-border">
+                <a href="#">
+                    لیست کامل
+                </a>
+            </div>
+            <div class="car-slider">
+                <div class="trust-ads"></div>
+                <div class="row slider-handler">
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-wrapper">
+        </div>
+    </div>
+</div>
+
+<div class="container car-slider-wrapper p-0">
+    <div class="col-md-12 p-0 d-flex">
+        <div class="right-wrapper">
+            <div class="top-border">
+                <a href="#">
+                    لیست کامل
+                </a>
+            </div>
+            <div class="car-slider">
+                <div class="personal-ads"></div>
+                <div class="row slider-handler">
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <a class="slider-item" href="#">
+                            <div class="slider-title">
+                                تویوتا / راو4
+                            </div>
+                            <div class="slider-image">
+                                <img class="img-fluid" src="../../img/homepage/car-sample.jpg" alt="">
+                            </div>
+                            <div class="slider-price">
+                                <span>430</span>
+                                ملیون تومان
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-wrapper">
+        </div>
+    </div>
+</div>
+
+<div class="container" id="article-wrapper">
+    <div class="article-section-header">
+        مقالات تخصصی خودرو
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="#" class="article-item">
+                <div class="article-img">
+                    <img src="../../img/articles/1.jpg" alt="">
+                </div>
+                <div class="article-header">
+                    قیمت روز خودروهای وارداتی را دنبال کنید.
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="article-item">
+                <div class="article-img">
+                    <img src="../../img/articles/2.jpg" alt="">
+                </div>
+                <div class="article-header">
+                    بهترین خودروهای اتومات زیر 150 ملیون
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="#" class="article-item">
+                <div class="article-img">
+                    <img src="../../img/articles/3.jpg" alt="">
+                </div>
+                <div class="article-header">
+                    در مورد دیاگ خودرو بیشتر بدانیم
+                </div>
+            </a>
         </div>
     </div>
 </div>
