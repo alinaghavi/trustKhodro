@@ -36,8 +36,10 @@
                 padding-right: 0;
                 .checkbox{
                     padding: 1rem;
+                    display: flex;
                 }
                 .submit{
+                    cursor: pointer;
                     padding: 1rem;
                     margin: 0 .5rem;
                     background-color: $primary;
@@ -68,15 +70,8 @@
                     text-align: center;
                 }
                 .row{
-                    .col-6{
-                        &:nth-child(odd){
-                            padding: .5rem 1.5rem;
-                            padding-left: .8rem;       
-                        }
-                        &:nth-child(even){
-                            padding: .5rem 1.5rem;
-                            padding-right: .8rem;
-                        }
+                    .col-12{
+                        padding: 1rem 2rem;
                         input{
                             border-radius: 0;
                         }
