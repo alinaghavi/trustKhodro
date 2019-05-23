@@ -1,4 +1,4 @@
-@import 'all-import';
+@import './all-import.scss';
 @mixin med ($max-w , $min-w){
     @media screen and (max-width: $max-w) and (min-width: $min-w){
         @content;
@@ -31,6 +31,7 @@ color: $text-primary;
     color: $text-primary;
 }
 }
+
 .h-wrapper{
     background-color: white;
     .container-fluid{
@@ -100,6 +101,9 @@ color: $text-primary;
         .nav-header{
             align-items: center;
             display: flex;
+            li a{
+                margin: 0 .2rem;
+            }   
         }
         img{
             margin-left: 1.8rem;
@@ -112,21 +116,35 @@ color: $text-primary;
 @include medx(838px){
     .h-wrapper{
         .container-fluid{
+            padding: 0;
+            img{
+                margin-left: 0;
+            }
             .sm-nav-header-icon{
                 display: block;
             }
             .nav-header{
+                display: none;
                 position: fixed;
                 right: 0;
-                left: 0;
-                top:10rem;
-                display: none;
+                left: 7rem;
+                border-left: 1px solid $primary;
+                border-right: 1px solid $primary;
+                top:0;
+                bottom: 0;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: flex-end !important;
+                @include box_shadow(5);
+                li{
+                    margin: .4rem 0;
+                    a{
+                        margin: 0 1rem;
+                    }
+                }
                 span{
                     display: none;
                 }                
-                a,li{
-                    text-align:center;
-                }
             }
         }
     }
