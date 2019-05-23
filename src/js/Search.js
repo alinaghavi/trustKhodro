@@ -90,7 +90,7 @@ import './wnumb-1.1.0/wNumb.js';
             $(filterSelected).append(tag);
         }
         if ($(this).data("index") == $('.price-search-see-cars-btn-wrap').eq(1).data("index")) {
-            var tag = ' <span class="filter_selected_span border rounded" data-filter="type">' + 'از سال ' + price2 + ' تا '+ price2 +'<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
+            var tag = ' <span class="filter_selected_span border rounded" data-filter="type">' + 'از سال ' + price1 + ' تا '+ price2 +'<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>';
             $(filterSelected).append(tag);
         }
 
@@ -240,6 +240,7 @@ $(document).ready(function () {
     noUiSlider.create(slider3, {
         start: [300000000, 550000000],
         connect: true,
+        direction : "rtl",
         step : 10000,
         range: {
             'min': 300000000,
