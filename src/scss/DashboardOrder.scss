@@ -1,4 +1,4 @@
-@import 'all-import';
+@import 'all-import.scss';
 @import 'stylesheet.scss';
 @mixin med ($max-w , $min-w){
     @media screen and (max-width: $max-w) and (min-width: $min-w){
