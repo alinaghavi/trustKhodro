@@ -143,6 +143,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             hash: true,
+            title: "signup",
             chunks: ['allImport' , 'DashboardSignup'],
             filename: 'views/Dashboard/Signup.html',
             template: './src/views/Dashboard/signup.html',
