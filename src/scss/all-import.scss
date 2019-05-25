@@ -1,11 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1200px
-);
+
 
 $break-small: 900px;
 $break-large: 1200px;
@@ -17,6 +12,19 @@ $line-primary: #e6e6e6;
 $font-stack: Homa, sans-serif;
 $heading-color: #6d6e71;
 $footer-color:#5e5c5c;
+
+@media (min-width: $break-large) {
+  .container{
+    max-width:1200px;
+  }
+}
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1800px
+);
 
 body {
   width: 100%;
