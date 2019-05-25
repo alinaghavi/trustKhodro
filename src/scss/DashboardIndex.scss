@@ -421,3 +421,113 @@
     }
   }
 }
+.box-sid-content{
+  .filter_item{
+      text-align: right;
+  }
+  .price-search-see-cars{
+      margin-left: 1rem;
+      .row{
+          align-items: center;
+          p{
+              text-align: right;
+                  margin-bottom: 0;
+                  margin-top: 6px;
+          }
+          .price-search-see-cars-input-wrap{
+              display: flex;
+              input{
+                  &:focus{
+                      outline: none;
+                  }
+                  width: 100%;
+                  border: none;
+              }
+          }
+      }
+      .price-search-see-cars-btn-wrap{
+          .btn{
+              display: block;
+              background-color: $primary;
+              color: white;
+              margin: .5rem 0;
+              padding: 6px 12px;
+          }
+      }
+  }
+  .btn-group{
+      .gearbox_item.fontsm.active{
+          background-color: $primary;
+          color: white;
+      }
+      .gearbox_item.fontsm{
+          font-size: .9rem;
+      }
+  }
+}
+.noUi-target{
+  height: 0.7rem !important;
+  margin: 1rem 0;
+  margin-left: 1rem;
+  .noUi-base{
+      .noUi-connects{
+          border: 0 !important;
+          border-radius: 0 !important;
+          background-color: $secondary !important;
+          .noUi-connect{
+              height: 100% !important;
+              background-color: $primary !important;
+              height: 10px;
+          }
+      }
+      .noUi-origin{
+          .noUi-handle.noUi-handle-lower{
+              &:focus{
+                  outline: none;
+              }
+              &::after{
+                  display: none !important;
+              }
+              &::before{
+                  display: none !important;
+              }
+              border: 0 !important;
+              box-shadow: none !important;
+              border-radius: 0 !important;
+              background-color: unset !important;
+              margin-right: 0 !important;
+              height: 20px;
+              width: 20px;
+              .noUi-touch-area{
+                  background:url("../img/range-marker.png");
+                  background-repeat: no-repeat;
+                  height: 20px;
+                  width: 20px;
+              }
+          }
+          .noUi-handle.noUi-handle-upper{
+              &:focus{
+                  outline: none;
+              }
+              &::before{
+                  display: none !important;
+              }
+              &::after{
+                  display: none !important;
+              }
+              border: 0 !important;
+              box-shadow: none !important;
+              background-color: unset !important;
+              margin-right: 0 !important;
+              height: 20px;
+              width: 20px;
+              .noUi-touch-area{
+                  background:url("../img/range-marker.png");
+                  background-repeat: no-repeat;
+                  height: 20px;
+                  width: 20px;
+              }
+          }
+      }
+  }
+}
