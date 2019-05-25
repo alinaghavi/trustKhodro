@@ -1,0 +1,276 @@
+@import 'all-import';
+@import 'stylesheet.scss';
+@mixin med ($max-w , $min-w){
+    @media screen and (max-width: $max-w) and (min-width: $min-w){
+        @content;
+    }
+}
+@mixin medx ($max-w) {
+@media screen and (max-width: $max-w){
+    @content;
+}
+}
+@mixin details($n) {
+    .container .card.details-#{$n}{
+        padding: 6px 22px;
+        .card-footer{
+            background-color: $secondary !important;
+            h3{
+                text-align: center;
+            }
+    }
+    .card-body{
+        .row{
+            @content;
+        }
+    }
+}
+}
+@function headings($from:1, $to:6) {
+@if $from == $to {
+    @return 'h#{$from}';
+} @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+}
+}
+#{headings(1,6)},p {
+text-align: justify;
+color: $text-primary;
+letter-spacing: -.5px;
+line-height: 30px;
+}
+a{
+    color: $text-primary;
+    &:hover{
+        color: $text-primary;
+    }
+}
+::placeholder,select.form-control{
+    color:$text-primary;
+}
+.form-control{
+    border-radius: 0 !important;
+    border-color: $line-primary;
+    &:focus{
+        color: $text-primary;
+     border-color: $line-primary; 
+     outline: 0; 
+     box-shadow: none;
+    }
+}
+.wrapper{
+    margin: 60px 0;
+    .container.main-poster{
+        .row{
+            img{
+                max-width:100%;height: auto;
+            }
+        }
+    }
+    .container.car-info{
+        border-color: $line-primary;
+        background-color: $secondary;
+        padding: 25px 32px 17px 25px;
+        .row{
+            margin-bottom: 23px;
+            .col-lg-4{
+                    margin-bottom: 1.55rem;
+                &:nth-child(3n+1){
+                    padding-left: 53.5px;
+                }
+                &:nth-child(3n+2){
+                    padding: 0 53.5px;
+                }
+                &:nth-child(3n+3){
+                    padding-right: 53.5px;
+                }
+            }
+        }
+        .row.textaria-file{
+            .col-lg-5{
+                padding-left:95px;
+                >input{
+                    margin-bottom: 24px;
+                }
+                form{
+                    .form-group{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .form-control-file{
+                            padding: 5px 12px;
+                            background-color: white;
+                            height: 40px;
+                        }
+                        label{
+                            color:$text-primary;
+                        }
+                    }
+                }
+            }   
+            .col-lg-7{
+                textarea{
+                    resize: none;
+                }
+            }    
+        }
+        button{
+            background-color: $primary;
+            border-radius: 0;
+            color: white;
+            padding:.7rem 3.12rem;
+            font-size: 22px;
+        }
+    }
+    .container.slogan{
+        margin: 1.5rem auto;
+        padding: 0;
+    }
+    .container.work-list{
+        .row{
+            .col-md-4{
+                padding: 0 .5rem;
+                &:first-child{
+                    padding-right: 0;
+                }
+                &:last-child{
+                    padding-left: 0;
+                }
+                .media{
+                    height: 100%;
+                    background-color: $secondary;
+                    padding: 18px 14px;
+                    p{
+                        font-size: 1.188rem;
+                    }
+                    .media-middle{
+                        margin-left: .9rem;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+    .container.q-common{
+        background-color: $secondary;
+        margin-top: 1.2rem;
+        padding: 1rem;
+        >h4{
+            margin-right: 2rem;
+        }
+        .col-lg-6.q-common-items{
+            padding: .5rem;
+            .q-common-item{
+                background-color: white;
+                padding: 10px;  
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+        }
+    }
+}
+@include medx(1200px){
+    .container.work-list{
+        .row{
+            .col-md-4{
+                padding: 8px;
+                .media{
+                    .media-body{
+                        .media-heading{
+                            font-variant-caps:all-petite-caps;
+                        }   
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include medx (992px){
+    .container.slogan{
+        padding: 0 1rem !important;
+        h3,h4{
+            font-size: 1.2rem !important;
+        }
+    }
+     .container.car-info{
+        .row{
+            .col-lg-4{
+                padding: 0 !important;
+            }
+        }
+    }
+    .row.textaria-file{
+        .col-lg-5{
+            padding: 0 !important;
+        }
+        .col-lg-7{
+            padding:0;
+        }
+    }
+    .container.work-list{
+        .row{
+            .col-md-4{
+                padding: 8px !important;
+                .media{
+                    .media-left{
+                        img{
+                            width:70px !important;
+                        }
+                    }
+                    .media-body{
+                        .media-heading{
+                            font-size: 19px;
+                        }
+                        p{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include medx(768px){
+    .container.work-list{
+        .row{
+            .col-md-4{
+                .media{
+                    .media-left{
+                        img{
+                            width:45px;
+                        }
+                    }
+                    .media-body{
+                        .media-heading{
+                            font-size: 1.5rem !important;
+                        }
+                        p{
+                            font-size: 1.188rem !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include medx(575px){
+    .container.work-list{
+        .row{
+            .col-md-4{
+                padding: 8px 0 !important;  
+                .media{
+                    .media-left{
+                        img{
+                            width:70px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
