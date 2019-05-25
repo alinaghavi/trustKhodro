@@ -1,1 +1,92 @@
 @import 'all-import';
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
+#{headings(1,6)},p,label{
+    text-align: justify;
+    color: $text-primary;
+    letter-spacing: -.5px;
+}
+.card{
+    border-color: $line-primary;
+    width: 402px;
+}
+.wrapper{
+    .row{
+        .card.login-main{
+            max-width: none;
+            position: fixed;
+            top: 15%;
+            right: 0rem;
+            left: 0rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $secondary;
+            .card-body{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                background-color: white;
+                padding-left: 0;
+                padding-right: 0;
+                .checkbox{
+                    padding: 1rem;
+                    display: flex;
+                }
+                .submit{
+                    cursor: pointer;
+                    padding: 1rem;
+                    margin: 0 .5rem;
+                    background-color: $primary;
+                    display: flex;
+                    height: 2.7rem;
+                    align-items: center;
+                    justify-content: space-between;
+                    >h4{
+                        color: white;
+                        width: 75%;
+                        text-align: left;
+                    }
+                    .user-plus{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        left: -1rem;
+                        width: 5rem;
+                        height: 3rem;
+                        background-color: rgb(99, 99, 99);
+                        img{
+                            width: 40px;
+                        }    
+                    }
+                }
+                >h4{
+                    text-align: center;
+                }
+                .row{
+                    .col-12{
+                        padding: 1rem 2rem;
+                        input{
+                            border-radius: 0;
+                            &:focus{
+                                box-shadow: none;
+                                border-color: $line-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:404px){
+    .card{
+        width: 100% !important;
+    }
+}
