@@ -56,7 +56,6 @@
     }
   } 
 .container-fluid{
-    height: 320px;
     .img-main{
         background: url('https://via.placeholder.com/1920x320') center no-repeat;
         background-size: cover;
@@ -135,7 +134,6 @@
     background-color: $secondary;
 }
 .container{
-    flex-direction: column;
     .msale-expert{
         margin-top: 25px;
         .sale-expert{

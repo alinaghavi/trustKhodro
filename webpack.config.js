@@ -62,12 +62,21 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[ext]',
-                            outputPath: 'img/'
+                            name: 'img/[folder]/[name].[ext]',
                         },
                     },
                 ],
             },
+            // {
+            //     test: /\.(html)$/,
+            //     use: {
+            //         loader: 'html-loader',
+            //         options: {
+            //             root: path.resolve(__dirname, 'assets'),
+            //             attrs: ['img:src', 'link:href']
+            //         }
+            //     }
+            // },
             {
                 test:/\.css$/,
                 use:[
