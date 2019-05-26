@@ -192,9 +192,6 @@ $(document).ready(function () {
     upperNumber.addEventListener('change', function () {
         slider.noUiSlider.set([null, this.value]);
     });
-    $(".price-search-see-cars-btn-wrap").click(function(){
-       $
-    });
 });
 $(document).ready(function () {
     var lowerNumber2 = document.getElementById('lower-number2');
